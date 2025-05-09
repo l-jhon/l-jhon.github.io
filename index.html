@@ -198,6 +198,9 @@
             overflow: hidden;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
         }
 
         .project-card:hover {
@@ -230,8 +233,10 @@
             padding: 1.5rem;
             display: flex;
             flex-direction: column;
-            gap: 1rem;
-            height: 100%;
+            flex-grow: 1;
+            /* Fixed height for all project content */
+            height: 450px;
+            overflow-y: auto;
         }
 
         .project-title {
@@ -249,6 +254,8 @@
             display: flex;
             flex-wrap: wrap;
             gap: 0.5rem;
+            margin-top: auto;
+            padding-top: 1rem;
         }
 
         .tech-tag {
@@ -418,6 +425,10 @@
             .project-grid {
                 grid-template-columns: 1fr;
             }
+            
+            .project-content {
+                height: 400px; /* Slightly smaller on mobile */
+            }
         }
 
         .achievement-list {
@@ -521,6 +532,32 @@
             animation: fadeInUp 1s ease 0.1s;
             animation-fill-mode: both;
         }
+
+        .nav-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 1rem;
+            cursor: pointer;
+            font-size: 1.5rem;
+            transition: background-color 0.3s;
+            z-index: 1001;
+        }
+
+        .nav-button:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .prev-button {
+            left: 1rem;
+        }
+
+        .next-button {
+            right: 1rem;
+        }
     </style>
 </head>
 <body>
@@ -569,7 +606,7 @@
                 <p>At companies like Spectral Finance, OpenBlock Labs, and Olist, I've had the opportunity to:</p>
                 <ul class="achievement-list">
                     <li>Reduce pipeline delivery time by 50–70%</li>
-                    <li>Build canonical models and reusable frameworks for DeFi and SaaS</li>
+                    <li>Build data models and reusable frameworks to help Data Scientists, Data Analysts, and Data Engineers improve their workflows working with DeFi ecosystems</li>
                     <li>Migrate workflows to ECS and Iceberg, helping cut cloud costs by up to 30%</li>
                     <li>Enable faster insights with tools like Spark, dbt, and AWS-native services</li>
                 </ul>
@@ -585,229 +622,188 @@
             <div class="project-grid">
                 <div class="project-card">
                     <div class="project-image-container" onclick="openModal(this)">
-                        <img src="images/image7.png" alt="BI Platform" class="project-image">
+                        <img src="images/dbt_data_architecture.png" alt="DBT Blockchain Analytics Architecture" class="project-image">
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">BI Platform - Retail</h3>
+                        <h3 class="project-title">Data Transformation Pipeline with DBT for Blockchain Analytics</h3>
                         <div class="star-method">
                             <h4>Situation</h4>
-                            <p>Working on a project that involved defining business rules with the business team and developing data infrastructure.</p>
+                            <p>Needed a scalable, reliable, and cost-effective data transformation pipeline for cross-chain blockchain analytics across Ethereum, Arbitrum, Linea, and Eigenlayer.</p>
                             
                             <h4>Task</h4>
-                            <p>Cooperate with business team to define rules and assist with service deployment, working with consulting company for DW data modeling.</p>
+                            <p>Build a DBT-based transformation pipeline using a 3-layer architecture, integrating with multiple cloud data warehouses and supporting advanced analytics.</p>
                             
                             <h4>Action</h4>
                             <ul class="project-details">
-                                <li>Collaborated with business team to translate needs into concrete rules</li>
-                                <li>Assisted in deploying necessary services for project infrastructure</li>
-                                <li>Participated in DW data modeling discussions and design process</li>
-                                <li>Determined fact and dimension tables layout using schema data modeling</li>
+                                <li>Developed reusable DBT macros and incremental models for efficient data processing</li>
+                                <li>Automated scheduling and orchestration with Airflow</li>
+                                <li>Integrated with Athena, Snowflake, and BigQuery for flexible analytics</li>
+                                <li>Implemented robust testing for data reliability</li>
+                                <li>Optimized partitioning to reduce processing time and costs</li>
+                                <li>Standardized models to enable cross-chain analytics</li>
                             </ul>
                             
                             <h4>Result</h4>
-                            <p>Successfully defined business rules and established robust data infrastructure, leading to enhanced data management capabilities.</p>
+                            <p>Delivered faster insights, scalable models, improved data reliability, and reduced infrastructure costs for blockchain analytics.</p>
                         </div>
                         <div class="tech-stack">
-                            <span class="tech-tag">Microsoft SQL Server</span>
-                            <span class="tech-tag">SSAS</span>
-                            <span class="tech-tag">SSRS</span>
-                            <span class="tech-tag">SSIS</span>
-                            <span class="tech-tag">Targit</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image-container" onclick="openModal(this)">
-                        <img src="images/image16.png" alt="Data Lakehouse" class="project-image">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Data Lakehouse Platform - Marketplace</h3>
-                        <div class="star-method">
-                            <h4>Situation</h4>
-                            <p>Company needed to become data-driven, handling 30+ databases, 300+ tables, and 35TB+ of data on S3, including third-party data sources.</p>
-                            
-                            <h4>Task</h4>
-                            <p>Create a data lakehouse platform using Spark on EMR with Hudi, Athena, ECS, Airbyte, Airflow, and Power BI.</p>
-                            
-                            <h4>Action</h4>
-                            <ul class="project-details">
-                                <li>Set up Spark on AWS EMR with Hudi table format</li>
-                                <li>Configured Athena for interactive queries</li>
-                                <li>Implemented Python scripts on ECS for Rest APIs</li>
-                                <li>Integrated Airbyte and Airflow for orchestration</li>
-                            </ul>
-                            
-                            <h4>Result</h4>
-                            <p>Successfully created a data lakehouse platform enabling data-driven decision making and improved business strategies.</p>
-                        </div>
-                        <div class="tech-stack">
-                            <span class="tech-tag">AWS EMR</span>
-                            <span class="tech-tag">Hudi</span>
-                            <span class="tech-tag">Athena</span>
+                            <span class="tech-tag">DBT</span>
                             <span class="tech-tag">Airflow</span>
-                            <span class="tech-tag">ECS</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image-container" onclick="openModal(this)">
-                        <img src="images/image1.png" alt="Data Pipeline" class="project-image">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Data Ingestion Pipeline - DynamoDB to Data Lakehouse</h3>
-                        <div class="star-method">
-                            <h4>Situation</h4>
-                            <p>Marketplace platform needed to summarize event data from DynamoDB for business analysis.</p>
-                            
-                            <h4>Task</h4>
-                            <p>Design and implement a pipeline to extract data from DynamoDB and load it into Data Lakehouse.</p>
-                            
-                            <h4>Action</h4>
-                            <ul class="project-details">
-                                <li>Implemented AWS Kinesis Streams for real-time data capture</li>
-                                <li>Used Kinesis Analytics for data processing</li>
-                                <li>Stored processed data in S3</li>
-                                <li>Enabled SQL queries via Athena</li>
-                            </ul>
-                            
-                            <h4>Result</h4>
-                            <p>Achieved 99.9% uptime SLA and reduced data latency by 80%, enabling real-time analytics and decision making.</p>
-                        </div>
-                        <div class="tech-stack">
-                            <span class="tech-tag">AWS Kinesis</span>
-                            <span class="tech-tag">S3</span>
                             <span class="tech-tag">Athena</span>
+                            <span class="tech-tag">Snowflake</span>
+                            <span class="tech-tag">BigQuery</span>
+                            <span class="tech-tag">Iceberg</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">SQL</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <div class="project-image-container" onclick="openModal(this)">
-                        <img src="images/image2.png" alt="ETL Pipeline" class="project-image">
+                        <img src="images/architecture_dune.png" alt="Dune Analytics Data Ingestion Pipeline" class="project-image">
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">Data Ingestion Wallet Transactions</h3>
+                        <h3 class="project-title">Automated Dune Analytics Data Ingestion Pipeline</h3>
                         <div class="star-method">
                             <h4>Situation</h4>
-                            <p>Organization needed comprehensive Ethereum blockchain transaction data for analysis, requiring faster data access than Etherscan API.</p>
+                            <p>Manual data ingestion from Dune Analytics was slow, error-prone, and limited the team's ability to quickly access blockchain analytics data.</p>
                             
                             <h4>Task</h4>
-                            <p>Design and implement a solution for extracting and processing Ethereum blockchain data with data modeling.</p>
+                            <p>Build an automated pipeline to integrate Dune Analytics with the enterprise data platform, enabling self-service ingestion into Athena.</p>
                             
                             <h4>Action</h4>
                             <ul class="project-details">
-                                <li>Set up Python-based extraction on AWS ECS</li>
-                                <li>Implemented data modeling for transaction types</li>
-                                <li>Created aggregated tables for balances</li>
-                                <li>Used Airflow for orchestration</li>
+                                <li>Developed a user-friendly interface for self-service data ingestion</li>
+                                <li>Automated pipeline deployment using ECS, Airflow, Docker, and Terraform</li>
+                                <li>Integrated Slack notifications for pipeline status updates</li>
+                                <li>Documented the process for easy onboarding and maintenance</li>
                             </ul>
                             
                             <h4>Result</h4>
-                            <p>Improved data collection speed and accuracy, enabling real-time analysis of blockchain transactions.</p>
+                            <p>Reduced data ingestion time by 90%, eliminated manual steps, improved data reliability, enhanced team productivity, and reduced operational costs.</p>
                         </div>
                         <div class="tech-stack">
                             <span class="tech-tag">Python</span>
                             <span class="tech-tag">AWS ECS</span>
                             <span class="tech-tag">Athena</span>
-                            <span class="tech-tag">EMR Serverless</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image-container" onclick="openModal(this)">
-                        <img src="images/image3.png" alt="Data Warehouse" class="project-image">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Data Ingestion Polygon Subgraph - DeFi Events</h3>
-                        <div class="star-method">
-                            <h4>Situation</h4>
-                            <p>Need to fetch DeFi data from The Graph's Polygon subgraph for lending protocols like Aave, Compound, and Avalanche.</p>
-                            
-                            <h4>Task</h4>
-                            <p>Set up reliable data extraction and processing pipeline for DeFi data from Polygon subgraph.</p>
-                            
-                            <h4>Action</h4>
-                            <ul class="project-details">
-                                <li>Configured extraction parameters for DeFi events</li>
-                                <li>Implemented data processing pipeline</li>
-                                <li>Integrated with existing data infrastructure</li>
-                            </ul>
-                            
-                            <h4>Result</h4>
-                            <p>Successfully implemented pipeline for DeFi data analysis, enhancing understanding of lending protocols.</p>
-                        </div>
-                        <div class="tech-stack">
-                            <span class="tech-tag">The Graph</span>
-                            <span class="tech-tag">Polygon</span>
-                            <span class="tech-tag">DeFi</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image-container" onclick="openModal(this)">
-                        <img src="images/image4.png" alt="ML Pipeline" class="project-image">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Webhook for CRM Events</h3>
-                        <div class="star-method">
-                            <h4>Situation</h4>
-                            <p>Sales team needed real-time insights from CRM events but lacked a system for instant notifications.</p>
-                            
-                            <h4>Task</h4>
-                            <p>Create a webhook to listen to CRM events and store data in Data Lakehouse.</p>
-                            
-                            <h4>Action</h4>
-                            <ul class="project-details">
-                                <li>Set up Flask application for webhook</li>
-                                <li>Implemented AWS Lambda for event processing</li>
-                                <li>Stored data in S3</li>
-                                <li>Used Serverless framework for deployment</li>
-                            </ul>
-                            
-                            <h4>Result</h4>
-                            <p>Enabled real-time insights for sales team, improving decision-making process and system reliability.</p>
-                        </div>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">AWS Lambda</span>
-                            <span class="tech-tag">Flask</span>
                             <span class="tech-tag">S3</span>
+                            <span class="tech-tag">Airflow</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">Terraform</span>
+                            <span class="tech-tag">Slack API</span>
+                            <span class="tech-tag">Poetry</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <div class="project-image-container" onclick="openModal(this)">
-                        <img src="images/image18.png" alt="Twitter Analysis" class="project-image">
+                        <img src="images/image_mermaid.png" alt="Data Pipeline Factory" class="project-image">
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">Twitter Data Analysis</h3>
+                        <h3 class="project-title">Data Pipeline Factory with Automated Deployment</h3>
                         <div class="star-method">
                             <h4>Situation</h4>
-                            <p>Academic project requiring Twitter data collection and analysis for specific hashtags.</p>
+                            <p>Teams relied on notebooks for prototyping and manual deployment, leading to slow, inconsistent, and unscalable data pipelines.</p>
                             
                             <h4>Task</h4>
-                            <p>Design and implement data pipeline for tweet extraction and analysis using Apache Nifi and StreamSets.</p>
+                            <p>Build a data pipeline factory to automate project scaffolding, configuration management, and Airflow DAG generation via YAML, enabling seamless dev-to-prod deployment.</p>
                             
                             <h4>Action</h4>
                             <ul class="project-details">
-                                <li>Set up data extraction using Apache Nifi</li>
-                                <li>Implemented StreamSets for data processing</li>
-                                <li>Created data visualization</li>
-                                <li>Generated insights from collected data</li>
+                                <li>Developed a factory to standardize pipeline structure and automate Airflow DAG creation</li>
+                                <li>Implemented YAML-driven config management for flexible pipeline definitions</li>
+                                <li>Automated deployment workflows using Docker, AWS ECS, and CI/CD</li>
+                                <li>Replaced notebook-based prototypes with production-grade pipelines</li>
+                                <li>Created onboarding documentation and templates for new team members</li>
                             </ul>
                             
                             <h4>Result</h4>
-                            <p>Successfully gathered and analyzed Twitter data, gaining practical experience with data pipeline tools.</p>
+                            <p>Reduced setup time from days to minutes, improved collaboration, automated deployment, enhanced scalability, and cut pipeline deployment from one month to 1-2 weeks.</p>
                         </div>
                         <div class="tech-stack">
-                            <span class="tech-tag">Apache Nifi</span>
-                            <span class="tech-tag">StreamSets</span>
                             <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Airflow</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">AWS ECS</span>
+                            <span class="tech-tag">Terraform</span>
+                            <span class="tech-tag">YAML</span>
+                            <span class="tech-tag">Poetry</span>
+                            <span class="tech-tag">CI/CD</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image-container" onclick="openModal(this)">
+                        <img src="images/image9.png" alt="Data Lakehouse" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Design and Implement the Data Lakehouse</h3>
+                        <div class="star-method">
+                            <h4>Situation</h4>
+                            <p>Company needed a robust data platform, moving from a NoSQL database to a comprehensive solution for data-driven culture.</p>
+                            
+                            <h4>Task</h4>
+                            <p>Design and implement a Data Lakehouse Platform to handle multiple data sources including blockchain, lending protocols, and cryptocurrency platforms.</p>
+                            
+                            <h4>Action</h4>
+                            <ul class="project-details">
+                                <li>Conducted POC tests for open table format selection</li>
+                                <li>Designed scalable architecture for multiple data sources</li>
+                                <li>Implemented platform with blockchain and DeFi data integration</li>
+                                <li>Established data access patterns for analytics</li>
+                            </ul>
+                            
+                            <h4>Result</h4>
+                            <p>Successfully established a functional Data Lakehouse platform enabling data-driven culture and efficient data access for analytics.</p>
+                        </div>
+                        <div class="tech-stack">
+                            <span class="tech-tag">AWS</span>
+                            <span class="tech-tag">Apache Spark</span>
+                            <span class="tech-tag">Apache Hudi</span>
+                            <span class="tech-tag">Airflow</span>
+                            <span class="tech-tag">Terraform</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image-container" onclick="openModal(this)">
+                        <img src="https://placehold.co/600x400?text=Dune+Analytics+Pipeline" alt="Dune Analytics Data Ingestion Pipeline" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Automated Dune Analytics Data Ingestion Pipeline</h3>
+                        <div class="star-method">
+                            <h4>Situation</h4>
+                            <p>Manual data ingestion from Dune Analytics was slow, error-prone, and limited the team's ability to quickly access blockchain analytics data.</p>
+                            
+                            <h4>Task</h4>
+                            <p>Build an automated pipeline to integrate Dune Analytics with the enterprise data platform, enabling self-service ingestion into Athena.</p>
+                            
+                            <h4>Action</h4>
+                            <ul class="project-details">
+                                <li>Developed a user-friendly interface for self-service data ingestion</li>
+                                <li>Automated pipeline deployment using ECS, Airflow, Docker, and Terraform</li>
+                                <li>Integrated Slack notifications for pipeline status updates</li>
+                                <li>Documented the process for easy onboarding and maintenance</li>
+                            </ul>
+                            
+                            <h4>Result</h4>
+                            <p>Reduced data ingestion time by 90%, eliminated manual steps, improved data reliability, enhanced team productivity, and reduced operational costs.</p>
+                        </div>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">AWS ECS</span>
+                            <span class="tech-tag">Athena</span>
+                            <span class="tech-tag">S3</span>
+                            <span class="tech-tag">Airflow</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">Terraform</span>
+                            <span class="tech-tag">Slack API</span>
+                            <span class="tech-tag">Poetry</span>
                         </div>
                     </div>
                 </div>
@@ -838,6 +834,82 @@
                         </div>
                         <div class="tech-stack">
                             <span class="tech-tag">Apache Hudi</span>
+                            <span class="tech-tag">DeFi</span>
+                            <span class="tech-tag">Python</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image-container" onclick="openModal(this)">
+                        <img src="images/image19.png" alt="Wallet Transactions - Architecture" class="project-image">
+                    </div>
+                    <div class="project-image-container" onclick="openModal(this)">
+                        <img src="images/image2.png" alt="Wallet Transactions" class="project-image">
+                    </div>
+                    <div class="project-image-container" onclick="openModal(this)">
+                        <img src="images/image8.png" alt="Wallet Transactions - Data Model" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">On-chain Credit Score - Data Pipeline with Ethereum Erigon Node</h3>
+                        <div class="star-method">
+                            <h4>Situation</h4>
+                            <p>Organization needed comprehensive Ethereum blockchain transaction data for on-chain credit scoring, requiring faster and more reliable data access than available through Etherscan API.</p>
+                            
+                            <h4>Task</h4>
+                            <p>Design and implement a custom Ethereum node solution for on-chain credit scoring, including evaluation of different clients.</p>
+                            
+                            <h4>Action</h4>
+                            <ul class="project-details">
+                                <li>Conducted POC comparing Geth and Erigon clients for archive node capabilities</li>
+                                <li>Selected Erigon client for its superior performance in archive node operations</li>
+                                <li>Set up Python-based data extraction on AWS ECS for transaction processing</li>
+                                <li>Implemented data processing with Athena and EMR Serverless</li>
+                                <li>Created data models for transaction categorization</li>
+                                <li>Developed aggregated tables for wallet and coin balances</li>
+                            </ul>
+                            
+                            <h4>Result</h4>
+                            <p>Successfully implemented a high-performance blockchain data processing system with custom Ethereum node, enabling real-time analysis of transactions for on-chain credit scoring.</p>
+                        </div>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Ethereum Node</span>
+                            <span class="tech-tag">Erigon Client</span>
+                            <span class="tech-tag">AWS ECS</span>
+                            <span class="tech-tag">EMR Serverless</span>
+                            <span class="tech-tag">Athena</span>
+                            <span class="tech-tag">Airflow</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image-container" onclick="openModal(this)">
+                        <img src="images/image3.png" alt="Polygon Subgraph - DeFi Events" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Data Ingestion Polygon Subgraph - DeFi Events</h3>
+                        <div class="star-method">
+                            <h4>Situation</h4>
+                            <p>We needed to fetch data from The Graph, specifically DeFi data from the Polygon subgraph. The data of interest were events generated by lending protocols.</p>
+                            
+                            <h4>Task</h4>
+                            <p>Set up a reliable data extraction and processing pipeline to get this specific DeFi data from the Polygon subgraph on The Graph.</p>
+                            
+                            <h4>Action</h4>
+                            <ul class="project-details">
+                                <li>Configured extraction parameters for DeFi events</li>
+                                <li>Implemented data extraction from lending protocols</li>
+                                <li>Processed and transformed data for analysis</li>
+                                <li>Integrated with existing data infrastructure</li>
+                            </ul>
+                            
+                            <h4>Result</h4>
+                            <p>Successfully implemented a pipeline to fetch and process DeFi data from the Polygon subgraph, enabling detailed analysis of lending protocol events.</p>
+                        </div>
+                        <div class="tech-stack">
+                            <span class="tech-tag">The Graph</span>
+                            <span class="tech-tag">Polygon</span>
                             <span class="tech-tag">DeFi</span>
                             <span class="tech-tag">Python</span>
                         </div>
@@ -878,7 +950,152 @@
 
                 <div class="project-card">
                     <div class="project-image-container" onclick="openModal(this)">
-                        <img src="images/image6.png" alt="Lambda Alerts" class="project-image">
+                        <img src="images/image7.png" alt="BI Platform" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">BI Platform - Retail</h3>
+                        <div class="star-method">
+                            <h4>Situation</h4>
+                            <p>Working on a project that involved defining business rules with the business team and developing data infrastructure.</p>
+                            
+                            <h4>Task</h4>
+                            <p>Cooperate with business team to define rules and assist with service deployment, working with consulting company for DW data modeling.</p>
+                            
+                            <h4>Action</h4>
+                            <ul class="project-details">
+                                <li>Collaborated with business team to translate needs into concrete rules</li>
+                                <li>Assisted in deploying necessary services for project infrastructure</li>
+                                <li>Participated in DW data modeling discussions and design process</li>
+                                <li>Determined fact and dimension tables layout using schema data modeling</li>
+                            </ul>
+                            
+                            <h4>Result</h4>
+                            <p>Successfully defined business rules and established robust data infrastructure, leading to enhanced data management capabilities.</p>
+                        </div>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Microsoft SQL Server</span>
+                            <span class="tech-tag">SSAS</span>
+                            <span class="tech-tag">SSRS</span>
+                            <span class="tech-tag">SSIS</span>
+                            <span class="tech-tag">Targit</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image-container" onclick="openModal(this)">
+                        <img src="images/image11.png" alt="Stockout Algorithm" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Algorithm to reduce Stockout - Retail</h3>
+                        <div class="star-method">
+                            <h4>Situation</h4>
+                            <p>Company was facing a high number of product stockouts across all branches.</p>
+                            
+                            <h4>Task</h4>
+                            <p>Develop an algorithm to suggest product transfers between branches to reduce stockouts based on business rules.</p>
+                            
+                            <h4>Action</h4>
+                            <ul class="project-details">
+                                <li>Conducted exploratory analysis of stockouts across branches</li>
+                                <li>Developed algorithm for product transfer suggestions</li>
+                                <li>Created consolidated data view for visualization</li>
+                                <li>Implemented business rules into the algorithm</li>
+                            </ul>
+                            
+                            <h4>Result</h4>
+                            <p>Significantly reduced product stockouts across branches through data-driven inventory management.</p>
+                        </div>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Oracle Database</span>
+                            <span class="tech-tag">SQL</span>
+                            <span class="tech-tag">Matplotlib</span>
+                            <span class="tech-tag">Jupyter Notebook</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image-container" onclick="openModal(this)">
+                        <img src="images/image11.png" alt="RFM Analysis" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">RFM Analysis</h3>
+                        <div class="star-method">
+                            <h4>Situation</h4>
+                            <p>Company needed effective customer segmentation to improve marketing efficiency and sales outcomes.</p>
+                            
+                            <h4>Task</h4>
+                            <p>Implement RFM analysis and cluster analysis for customer segmentation to improve marketing targeting.</p>
+                            
+                            <h4>Action</h4>
+                            <ul class="project-details">
+                                <li>Collected and prepared customer data for RFM analysis</li>
+                                <li>Scored customers based on recency, frequency, and monetary value</li>
+                                <li>Performed cluster analysis for similar buying behaviors</li>
+                                <li>Created tailored marketing strategies for each segment</li>
+                            </ul>
+                            
+                            <h4>Result</h4>
+                            <p>Improved marketing effectiveness through targeted campaigns and increased sales through better customer understanding.</p>
+                        </div>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Oracle Database</span>
+                            <span class="tech-tag">SQL</span>
+                            <span class="tech-tag">Metabase</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image-container" onclick="openModal(this)">
+                        <img src="images/image18.png" alt="Twitter Analysis - Overview" class="project-image">
+                    </div>
+                    <div class="project-image-container" onclick="openModal(this)">
+                        <img src="images/image14.png" alt="Twitter Analysis - Apache NiFi" class="project-image">
+                    </div>
+                    <div class="project-image-container" onclick="openModal(this)">
+                        <img src="images/image10.png" alt="Twitter Analysis - StreamSets" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Twitter Data Analysis</h3>
+                        <div class="star-method">
+                            <h4>Situation</h4>
+                            <p>Academic project requiring Twitter data collection and analysis for specific hashtags.</p>
+                            
+                            <h4>Task</h4>
+                            <p>Design and implement data pipeline for tweet extraction and analysis using Apache Nifi and StreamSets.</p>
+                            
+                            <h4>Action</h4>
+                            <ul class="project-details">
+                                <li>Set up data extraction using Apache Nifi</li>
+                                <li>Implemented StreamSets for data processing</li>
+                                <li>Created data visualization</li>
+                                <li>Generated insights from collected data</li>
+                            </ul>
+                            
+                            <h4>Result</h4>
+                            <p>Successfully gathered and analyzed Twitter data, gaining practical experience with data pipeline tools.</p>
+                        </div>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Apache Nifi</span>
+                            <span class="tech-tag">StreamSets</span>
+                            <span class="tech-tag">Python</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image-container" onclick="openModal(this)">
+                        <img src="images/image6.png" alt="Lambda Alerts - Architecture" class="project-image">
+                    </div>
+                    <div class="project-image-container" onclick="openModal(this)">
+                        <img src="images/image12.png" alt="Lambda Alerts - Monitoring" class="project-image">
+                    </div>
+                    <div class="project-image-container" onclick="openModal(this)">
+                        <img src="images/image13.png" alt="Lambda Alerts - Slack Integration" class="project-image">
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">Lambda Observability Alerts</h3>
@@ -904,6 +1121,108 @@
                             <span class="tech-tag">AWS Lambda</span>
                             <span class="tech-tag">Python</span>
                             <span class="tech-tag">Slack API</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image-container" onclick="openModal(this)">
+                        <img src="images/image16.png" alt="Data Lakehouse Platform" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Data Lakehouse Platform - Marketplace</h3>
+                        <div class="star-method">
+                            <h4>Situation</h4>
+                            <p>Company sought to become a data-driven organization, needing to construct a data lakehouse platform on AWS to handle 30+ databases, 300+ tables, and 35TB+ of data on S3.</p>
+                            
+                            <h4>Task</h4>
+                            <p>Create a comprehensive data lakehouse platform using modern data stack technologies including Spark on EMR with Hudi, Athena, ECS, Airbyte, Airflow, and Power BI.</p>
+                            
+                            <h4>Action</h4>
+                            <ul class="project-details">
+                                <li>Set up Spark on AWS EMR with Hudi as table format</li>
+                                <li>Configured Athena for interactive queries</li>
+                                <li>Implemented Python scripts on ECS for API data collection</li>
+                                <li>Integrated Airbyte for additional data extraction</li>
+                                <li>Set up Airflow for orchestration and scheduling</li>
+                            </ul>
+                            
+                            <h4>Result</h4>
+                            <p>Successfully established a scalable data lakehouse platform enabling data-driven decision making and improved data accessibility.</p>
+                        </div>
+                        <div class="tech-stack">
+                            <span class="tech-tag">AWS Cloud</span>
+                            <span class="tech-tag">Apache Spark</span>
+                            <span class="tech-tag">Apache Hudi</span>
+                            <span class="tech-tag">Airflow</span>
+                            <span class="tech-tag">Airbyte</span>
+                            <span class="tech-tag">Power BI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image-container" onclick="openModal(this)">
+                        <img src="images/image1.png" alt="DynamoDB Pipeline" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Data Ingestion Pipeline - From DynamoDB to Data Lakehouse</h3>
+                        <div class="star-method">
+                            <h4>Situation</h4>
+                            <p>Marketplace platform needed to summarize event data from DynamoDB for business analysis, requiring a robust data pipeline solution.</p>
+                            
+                            <h4>Task</h4>
+                            <p>Design and implement a pipeline to extract data from DynamoDB and load it into the Data Lakehouse for analysis.</p>
+                            
+                            <h4>Action</h4>
+                            <ul class="project-details">
+                                <li>Leveraged AWS Kinesis Streams for real-time data capture</li>
+                                <li>Used Kinesis Analytics for data stream processing</li>
+                                <li>Stored processed data in S3 Data Lakehouse</li>
+                                <li>Implemented Athena for SQL querying capabilities</li>
+                            </ul>
+                            
+                            <h4>Result</h4>
+                            <p>Successfully implemented a real-time data pipeline enabling efficient analysis of DynamoDB event data, leading to improved business insights.</p>
+                        </div>
+                        <div class="tech-stack">
+                            <span class="tech-tag">AWS Kinesis</span>
+                            <span class="tech-tag">DynamoDB</span>
+                            <span class="tech-tag">S3</span>
+                            <span class="tech-tag">Athena</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image-container" onclick="openModal(this)">
+                        <img src="images/image4.png" alt="CRM Webhook" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Webhook to listen to CRM Events</h3>
+                        <div class="star-method">
+                            <h4>Situation</h4>
+                            <p>Sales team needed real-time insights from CRM events but lacked a system to capture and process these events for immediate analysis.</p>
+                            
+                            <h4>Task</h4>
+                            <p>Create a webhook system to listen to CRM events, process them, and store the data in the Data Lakehouse for real-time analysis.</p>
+                            
+                            <h4>Action</h4>
+                            <ul class="project-details">
+                                <li>Developed Flask application for webhook endpoint</li>
+                                <li>Implemented AWS Lambda for event processing</li>
+                                <li>Set up Serverless framework for deployment</li>
+                                <li>Integrated with S3 for data storage</li>
+                            </ul>
+                            
+                            <h4>Result</h4>
+                            <p>Successfully implemented a real-time CRM event processing system, enabling immediate access to sales data and improving decision-making capabilities.</p>
+                        </div>
+                        <div class="tech-stack">
+                            <span class="tech-tag">AWS Lambda</span>
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">Serverless</span>
+                            <span class="tech-tag">S3</span>
                         </div>
                     </div>
                 </div>
@@ -957,7 +1276,9 @@
     <div class="modal" id="imageModal">
         <div class="modal-content">
             <button class="close-modal" onclick="closeModal()">&times;</button>
+            <button class="nav-button prev-button" onclick="navigateImage(-1)">❮</button>
             <img src="" alt="Project Diagram" class="modal-image" id="modalImage">
+            <button class="nav-button next-button" onclick="navigateImage(1)">❯</button>
         </div>
     </div>
 
@@ -981,15 +1302,33 @@
         });
 
         // Modal functionality
+        let currentImageIndex = 0;
+        let currentProjectImages = [];
+
         function openModal(element) {
             const modal = document.getElementById('imageModal');
             const modalImg = document.getElementById('modalImage');
-            const img = element.querySelector('.project-image');
+            const projectCard = element.closest('.project-card');
+            const images = projectCard.querySelectorAll('.project-image');
+            
+            currentProjectImages = Array.from(images);
+            currentImageIndex = currentProjectImages.indexOf(element.querySelector('.project-image'));
             
             modal.classList.add('active');
+            updateModalImage();
+            document.body.style.overflow = 'hidden';
+        }
+
+        function updateModalImage() {
+            const modalImg = document.getElementById('modalImage');
+            const img = currentProjectImages[currentImageIndex];
             modalImg.src = img.src;
             modalImg.alt = img.alt;
-            document.body.style.overflow = 'hidden';
+        }
+
+        function navigateImage(direction) {
+            currentImageIndex = (currentImageIndex + direction + currentProjectImages.length) % currentProjectImages.length;
+            updateModalImage();
         }
 
         function closeModal() {
@@ -1005,10 +1344,16 @@
             }
         });
 
-        // Close modal with escape key
+        // Add keyboard navigation
         document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                closeModal();
+            if (document.getElementById('imageModal').classList.contains('active')) {
+                if (e.key === 'ArrowLeft') {
+                    navigateImage(-1);
+                } else if (e.key === 'ArrowRight') {
+                    navigateImage(1);
+                } else if (e.key === 'Escape') {
+                    closeModal();
+                }
             }
         });
     </script>
