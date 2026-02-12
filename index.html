@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jhon Lucas - Data Engineer Portfolio</title>
+    <title>Jhon Lucas | Senior Data Engineer Portfolio</title>
+    <meta name="description" content="Senior Data Engineer focused on scalable data platforms, Web3 analytics, and modern data stack projects with measurable business impact.">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-QF0QWCWYZ0"></script>
     <script>
@@ -138,6 +139,65 @@
             animation-fill-mode: both;
         }
 
+        .hero-actions {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 1.25rem 0 0.75rem;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease 0.3s;
+            animation-fill-mode: both;
+        }
+
+        .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.25rem;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .cta-primary {
+            background: var(--primary);
+            color: #fff;
+            box-shadow: 0 6px 16px rgba(255, 77, 77, 0.25);
+        }
+
+        .cta-secondary {
+            background: var(--card-bg);
+            color: var(--text);
+            border: 1px solid var(--border);
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .quick-facts {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin: 0 auto;
+            max-width: 760px;
+            animation: fadeInUp 1s ease 0.25s;
+            animation-fill-mode: both;
+        }
+
+        .fact-pill {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            color: var(--text-light);
+            border-radius: 999px;
+            padding: 0.4rem 0.9rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
         .social-links {
             display: flex;
             justify-content: center;
@@ -193,6 +253,13 @@
             margin: 1rem auto;
         }
 
+        .section-lead {
+            text-align: center;
+            color: var(--text-light);
+            max-width: 760px;
+            margin: -0.5rem auto 0;
+        }
+
         .project-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -214,6 +281,24 @@
         .project-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+        }
+
+        .project-card.featured {
+            border: 2px solid var(--primary);
+            position: relative;
+        }
+
+        .featured-badge {
+            position: absolute;
+            top: 0.75rem;
+            right: 0.75rem;
+            background: var(--primary);
+            color: #fff;
+            padding: 0.35rem 0.7rem;
+            border-radius: 999px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            z-index: 2;
         }
 
         .project-image-container {
@@ -589,13 +674,29 @@
         <div class="container">
             <h1>Data Engineering Portfolio</h1>
             <p class="professional-title">Data Citizen & Modern Data Stack Specialist</p>
-            <p>Data Engineer specializing in building scalable data platforms and pipelines</p>
+            <p>Senior Data Engineer building scalable data platforms for analytics, Web3 intelligence, and business-critical decisions.</p>
+            <div class="quick-facts">
+                <span class="fact-pill">8+ years in data engineering</span>
+                <span class="fact-pill">Web2 + Web3 production systems</span>
+                <span class="fact-pill">50-70% faster pipeline delivery</span>
+                <span class="fact-pill">Cloud cost reductions up to 30%</span>
+            </div>
+            <div class="hero-actions">
+                <a href="#projects" class="cta-btn cta-primary">
+                    <i class="fas fa-bolt"></i>
+                    <span>View Featured Work</span>
+                </a>
+                <a href="https://github.com/l-jhon/uniswap-v3-event-streamer" target="_blank" rel="noopener noreferrer" class="cta-btn cta-secondary">
+                    <i class="fab fa-github"></i>
+                    <span>Latest Project</span>
+                </a>
+            </div>
             <div class="social-links">
-                <a href="https://www.linkedin.com/in/jhon-lucas/" target="_blank" class="social-link">
+                <a href="https://www.linkedin.com/in/jhon-lucas/" target="_blank" rel="noopener noreferrer" class="social-link">
                     <i class="fab fa-linkedin"></i>
                     <span>LinkedIn</span>
                 </a>
-                <a href="https://github.com/l-jhon" target="_blank" class="social-link">
+                <a href="https://github.com/l-jhon" target="_blank" rel="noopener noreferrer" class="social-link">
                     <i class="fab fa-github"></i>
                     <span>GitHub</span>
                 </a>
@@ -627,7 +728,51 @@
     <section id="projects" class="projects">
         <div class="container">
             <h2 class="section-title">Projects</h2>
+            <p class="section-lead">Selected projects focused on scalable pipelines, event-driven systems, observability, and measurable product impact.</p>
             <div class="project-grid">
+                <div class="project-card featured">
+                    <span class="featured-badge">Recent</span>
+                    <div class="project-image-container" onclick="openModal(this)">
+                        <img src="images/uniswap-event-streamer.svg" alt="Uniswap V3 Event Streamer Architecture" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Uniswap V3 Event Streamer</h3>
+                        <div class="star-method">
+                            <h4>Situation</h4>
+                            <p>Needed reliable and observable real-time ingestion of Uniswap V3 events for downstream analytics and stateful processing.</p>
+
+                            <h4>Task</h4>
+                            <p>Build an event-driven pipeline that supports multi-pool streaming, handles chain reorganizations, and maintains fault-tolerant state across restarts.</p>
+
+                            <h4>Action</h4>
+                            <ul class="project-details">
+                                <li>Implemented producer/consumer architecture using Kafka for decoupled processing</li>
+                                <li>Built checkpoint-based recovery workflow for restart safety</li>
+                                <li>Added reorg-aware event handling to keep event state consistent</li>
+                                <li>Instrumented pipeline metrics with Prometheus and Grafana dashboards</li>
+                                <li>Containerized local stack with Docker Compose for fast setup</li>
+                            </ul>
+
+                            <h4>Result</h4>
+                            <p>Delivered a resilient and observable event streaming stack that makes Uniswap V3 event ingestion production-ready.</p>
+                        </div>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Kafka</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">Prometheus</span>
+                            <span class="tech-tag">Grafana</span>
+                            <span class="tech-tag">Uniswap V3</span>
+                            <span class="tech-tag">eth-defi</span>
+                        </div>
+                        <a href="https://github.com/l-jhon/uniswap-v3-event-streamer" target="_blank" rel="noopener noreferrer" class="project-link">
+                            <span>View Repository</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
                 <div class="project-card">
                     <div class="project-image-container" onclick="openModal(this)">
                         <img src="images/dbt_data_architecture.png" alt="DBT Blockchain Analytics Architecture" class="project-image">
@@ -1292,7 +1437,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Jhon Lucas. All rights reserved.</p>
+            <p>&copy; 2026 Jhon Lucas. All rights reserved.</p>
         </div>
     </footer>
 

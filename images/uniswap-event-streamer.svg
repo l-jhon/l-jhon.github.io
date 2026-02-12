@@ -1,0 +1,47 @@
+<svg width="1200" height="675" viewBox="0 0 1200 675" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="675" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1F2937"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="250" y1="180" x2="950" y2="500" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF4D4D"/>
+      <stop offset="1" stop-color="#FF8B6E"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" rx="24" fill="url(#bg)"/>
+  <rect x="90" y="80" width="1020" height="515" rx="20" fill="#0B1220" stroke="#374151" stroke-width="2"/>
+  <circle cx="220" cy="165" r="8" fill="#FF4D4D"/>
+  <circle cx="250" cy="165" r="8" fill="#FBBF24"/>
+  <circle cx="280" cy="165" r="8" fill="#10B981"/>
+
+  <rect x="145" y="225" width="230" height="95" rx="12" fill="#111827" stroke="#4B5563"/>
+  <text x="260" y="263" fill="#F9FAFB" font-family="Inter, sans-serif" font-size="24" text-anchor="middle">RPC Node</text>
+  <text x="260" y="292" fill="#9CA3AF" font-family="Inter, sans-serif" font-size="16" text-anchor="middle">Uniswap V3 logs</text>
+
+  <rect x="485" y="225" width="230" height="95" rx="12" fill="#111827" stroke="#4B5563"/>
+  <text x="600" y="263" fill="#F9FAFB" font-family="Inter, sans-serif" font-size="24" text-anchor="middle">Kafka</text>
+  <text x="600" y="292" fill="#9CA3AF" font-family="Inter, sans-serif" font-size="16" text-anchor="middle">event bus</text>
+
+  <rect x="825" y="225" width="230" height="95" rx="12" fill="#111827" stroke="#4B5563"/>
+  <text x="940" y="263" fill="#F9FAFB" font-family="Inter, sans-serif" font-size="24" text-anchor="middle">Consumer</text>
+  <text x="940" y="292" fill="#9CA3AF" font-family="Inter, sans-serif" font-size="16" text-anchor="middle">state + checkpoints</text>
+
+  <rect x="365" y="390" width="230" height="95" rx="12" fill="#111827" stroke="#4B5563"/>
+  <text x="480" y="428" fill="#F9FAFB" font-family="Inter, sans-serif" font-size="24" text-anchor="middle">PostgreSQL</text>
+  <text x="480" y="457" fill="#9CA3AF" font-family="Inter, sans-serif" font-size="16" text-anchor="middle">offsets + metadata</text>
+
+  <rect x="705" y="390" width="230" height="95" rx="12" fill="#111827" stroke="#4B5563"/>
+  <text x="820" y="428" fill="#F9FAFB" font-family="Inter, sans-serif" font-size="24" text-anchor="middle">Grafana</text>
+  <text x="820" y="457" fill="#9CA3AF" font-family="Inter, sans-serif" font-size="16" text-anchor="middle">observability</text>
+
+  <path d="M375 272H485" stroke="url(#accent)" stroke-width="4" stroke-linecap="round"/>
+  <path d="M715 272H825" stroke="url(#accent)" stroke-width="4" stroke-linecap="round"/>
+  <path d="M940 320V390" stroke="url(#accent)" stroke-width="4" stroke-linecap="round"/>
+  <path d="M825 438H705" stroke="url(#accent)" stroke-width="4" stroke-linecap="round"/>
+  <path d="M600 320V390H595" stroke="url(#accent)" stroke-width="4" stroke-linecap="round"/>
+  <path d="M485 438H595" stroke="url(#accent)" stroke-width="4" stroke-linecap="round"/>
+
+  <text x="600" y="125" fill="#F9FAFB" font-family="Inter, sans-serif" font-size="40" font-weight="700" text-anchor="middle">Uniswap V3 Event Streamer</text>
+  <text x="600" y="560" fill="#9CA3AF" font-family="Inter, sans-serif" font-size="22" text-anchor="middle">Reorg-aware, checkpointed, observable streaming pipeline</text>
+</svg>
