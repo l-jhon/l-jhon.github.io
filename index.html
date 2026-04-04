@@ -686,6 +686,102 @@
             background: var(--card-bg);
         }
 
+        .recommendations {
+            padding: 4rem 0;
+            background:
+                linear-gradient(180deg, rgba(5, 9, 20, 0.92), rgba(8, 14, 30, 0.78)),
+                var(--background-alt);
+        }
+
+        .recommendations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .recommendation-card {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            padding: 1.5rem;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            background:
+                linear-gradient(180deg, rgba(59, 102, 255, 0.12), rgba(45, 215, 255, 0.03)),
+                rgba(9, 14, 32, 0.82);
+            box-shadow: 0 16px 34px rgba(0, 0, 0, 0.28);
+            backdrop-filter: blur(8px);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .recommendation-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.34);
+        }
+
+        .recommendation-icon {
+            width: 2.75rem;
+            height: 2.75rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            color: var(--primary);
+            background: rgba(59, 102, 255, 0.12);
+            border: 1px solid rgba(59, 102, 255, 0.3);
+        }
+
+        .recommendation-copy {
+            margin: 0;
+            color: var(--text-light);
+        }
+
+        .recommendation-copy p {
+            margin: 0;
+        }
+
+        .recommendation-copy p + p {
+            margin-top: 0.9rem;
+        }
+
+        .recommendation-footer {
+            margin-top: auto;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(159, 180, 214, 0.18);
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .recommendation-name {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        .recommendation-role {
+            margin: 0.3rem 0 0;
+            color: var(--text-light);
+            font-size: 0.92rem;
+        }
+
+        .recommendation-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s ease, transform 0.2s ease;
+        }
+
+        .recommendation-link:hover {
+            color: var(--secondary);
+            transform: translateY(-1px);
+        }
+
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -1034,6 +1130,7 @@
             <div class="nav-content">
                 <div class="nav-links">
                     <a href="#about">About</a>
+                    <a href="#recommendations">Recommendations</a>
                     <a href="#services">Services</a>
                     <a href="#projects">Projects</a>
                     <a href="#skills">Skills</a>
@@ -1139,6 +1236,93 @@
                 </ul>
                 
                 <p>I enjoy working across Python, Spark, dbt, Terraform, ECS, FastAPI, and more — but what I really care about is solving real problems, mentoring teams, and delivering clean, maintainable solutions.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="recommendations" class="recommendations">
+        <div class="container">
+            <h2 class="section-title">Recommendations</h2>
+            <p class="section-lead">Feedback from colleagues and collaborators I've worked with across data engineering, analytics, and Web3.</p>
+            <div class="recommendations-grid">
+                <article class="recommendation-card">
+                    <div class="recommendation-icon" aria-hidden="true">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <blockquote class="recommendation-copy">
+                        <p>I worked with Jhon for some time and he's genuinely one of the strongest data engineers I've had the chance to collaborate with. His knowledge of the AWS stack in particular is impressive. He always had an answer, and when he didn't, he'd figure it out fast.</p>
+                        <p>He's also just easy to work with. He's proactive and always looking to improve things. I would work with him again without a second thought.</p>
+                    </blockquote>
+                    <div class="recommendation-footer">
+                        <div>
+                            <h3 class="recommendation-name">Murathan Ba&#287;dat</h3>
+                            <p class="recommendation-role">DeFi Risk Analyst at Chaos Labs</p>
+                        </div>
+                        <a href="https://www.linkedin.com/in/murathanbagdat/" target="_blank" rel="noopener noreferrer" class="recommendation-link">
+                            <span>LinkedIn</span>
+                            <i class="fas fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="recommendation-card">
+                    <div class="recommendation-icon" aria-hidden="true">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <blockquote class="recommendation-copy">
+                        <p>Jhon combines strong data engineering expertise with a strong sense of ownership and practical problem-solving. While we worked together on on-chain credit scoring, he played a key role in building the data platform, feature store, and APIs that enabled reliable and scalable data usage across the team.</p>
+                        <p>He is collaborative, thoughtful, and genuinely great to work with.</p>
+                    </blockquote>
+                    <div class="recommendation-footer">
+                        <div>
+                            <h3 class="recommendation-name">Zhou Zhang</h3>
+                            <p class="recommendation-role">Data at Meta</p>
+                        </div>
+                        <a href="https://www.linkedin.com/in/zhouzhang2017/" target="_blank" rel="noopener noreferrer" class="recommendation-link">
+                            <span>LinkedIn</span>
+                            <i class="fas fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="recommendation-card">
+                    <div class="recommendation-icon" aria-hidden="true">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <blockquote class="recommendation-copy">
+                        <p>It was a pleasure collaborating with Jhon. He is thoughtful, efficient, and takes ownership of his responsibilities. He consistently delivered high-quality data infrastructure that proved reliable.</p>
+                    </blockquote>
+                    <div class="recommendation-footer">
+                        <div>
+                            <h3 class="recommendation-name">Sishir Varghese</h3>
+                            <p class="recommendation-role">CEO &amp; Co-Founder at The Grid and Spectral Finance</p>
+                        </div>
+                        <a href="https://www.linkedin.com/in/sishir-varghese-47576b2a/" target="_blank" rel="noopener noreferrer" class="recommendation-link">
+                            <span>LinkedIn</span>
+                            <i class="fas fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="recommendation-card">
+                    <div class="recommendation-icon" aria-hidden="true">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <blockquote class="recommendation-copy">
+                        <p>I worked with Jhon on structuring blockchain and DeFi data for analytics and ML use cases, and one of his strengths was turning complex raw data into something reliable and actionable.</p>
+                        <p>He combines strong data engineering skills with a pragmatic mindset, and he was a great partner in bridging data platform work with analytics and modeling needs.</p>
+                    </blockquote>
+                    <div class="recommendation-footer">
+                        <div>
+                            <h3 class="recommendation-name">Zane Peycke</h3>
+                            <p class="recommendation-role">Head of Machine Learning at The Grid</p>
+                        </div>
+                        <a href="https://www.linkedin.com/in/peycke/" target="_blank" rel="noopener noreferrer" class="recommendation-link">
+                            <span>LinkedIn</span>
+                            <i class="fas fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
