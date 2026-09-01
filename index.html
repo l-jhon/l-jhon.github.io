@@ -3,20 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Citizen | Data &amp; AI Consultancy</title>
-    <meta name="description" content="Data and AI consultancy focused on scalable data platforms, AI agents, Web3 analytics, and modern data stack delivery with measurable business impact.">
-    <meta name="keywords" content="Data and AI Consultancy, AI Engineering Consultant, Data Engineer Consultant, AI Agents, LLM Workflows, Web3 Data Engineer, Data Pipelines, AWS, Airflow, dbt">
+    <title>Jhon Lucas | Data Engineer &amp; Consultant</title>
+    <meta name="description" content="Jhon Lucas builds dependable data platforms, AI workflows, and blockchain infrastructure for teams that need production-ready systems.">
+    <meta name="keywords" content="Jhon Lucas, Data Engineer, Data Engineering Consultant, AI Engineering, Web3 Data, AWS, Airflow, dbt, Spark">
     <link rel="canonical" href="https://l-jhon.github.io/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Data Citizen | Data &amp; AI Consultancy">
-    <meta property="og:description" content="Data and AI consultancy for scalable data platforms, AI agents, analytics, and Web3 event pipelines. Available for consulting and freelance projects.">
+    <meta property="og:title" content="Jhon Lucas | Data Engineer &amp; Consultant">
+    <meta property="og:description" content="Data systems that survive production: platforms, AI workflows, and blockchain infrastructure.">
     <meta property="og:url" content="https://l-jhon.github.io/">
-    <meta property="og:image" content="https://l-jhon.github.io/images/data-citizen-logo-original.png">
+    <meta property="og:image" content="https://l-jhon.github.io/images/uniswap-event-streamer.svg">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Data Citizen | Data &amp; AI Consultancy">
-    <meta name="twitter:description" content="Scalable data platforms, AI agents, analytics, and Web3 pipelines for measurable business impact.">
-    <meta name="twitter:image" content="https://l-jhon.github.io/images/data-citizen-logo-original.png">
-    <!-- Google tag (gtag.js) -->
+    <meta name="twitter:title" content="Jhon Lucas | Data Engineer &amp; Consultant">
+    <meta name="twitter:description" content="Data systems that survive production.">
+    <meta name="twitter:image" content="https://l-jhon.github.io/images/uniswap-event-streamer.svg">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;family=Newsreader:opsz,wght@6..72,500;6..72,600&amp;display=swap" rel="stylesheet">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-QF0QWCWYZ0"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -24,21 +27,13 @@
         gtag('js', new Date());
         gtag('config', 'G-QF0QWCWYZ0');
     </script>
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="manifest" href="site.webmanifest">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Jhon Lucas",
       "url": "https://l-jhon.github.io/",
-      "jobTitle": "Founder & Data/AI Engineering Consultant",
+      "jobTitle": "Data and AI Engineering Consultant",
       "sameAs": [
         "https://www.linkedin.com/in/jhon-lucas/",
         "https://github.com/l-jhon"
@@ -46,2277 +41,975 @@
       "knowsAbout": [
         "Data Engineering",
         "AI Engineering",
-        "AI Agents",
-        "LLM Workflows",
+        "Data Platforms",
         "Web3 Analytics",
-        "ETL Pipelines",
         "AWS",
         "Apache Airflow",
         "dbt",
         "Apache Spark"
-      ],
-      "description": "Founder of a Data and AI consultancy available for part-time consulting and freelance projects."
+      ]
     }
     </script>
     <style>
         :root {
-            --primary: #3b66ff;
-            --primary-dark: #253fd9;
-            --secondary: #2dd7ff;
+            --ink: #f1eee7;
+            --muted: #aaa79f;
+            --paper: #111210;
+            --paper-raised: #181916;
+            --paper-soft: #e8e4da;
+            --line: #34352f;
             --accent: #ff6b3d;
-            --background: #040512;
-            --background-alt: #0b1024;
-            --text: #eef3ff;
-            --text-light: #9fb4d6;
-            --border: rgba(84, 116, 170, 0.4);
-            --card-bg: rgba(9, 14, 32, 0.76);
+            --accent-dark: #c84621;
+            --radius: 4px;
+            --content: 1160px;
         }
 
         * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
-            font-family: 'Sora', sans-serif;
-            line-height: 1.65;
-            color: var(--text);
-            background:
-                radial-gradient(circle at 10% 16%, rgba(59, 102, 255, 0.35) 0%, rgba(59, 102, 255, 0) 34%),
-                radial-gradient(circle at 88% 18%, rgba(255, 107, 61, 0.28) 0%, rgba(255, 107, 61, 0) 32%),
-                radial-gradient(circle at 50% 82%, rgba(45, 215, 255, 0.18) 0%, rgba(45, 215, 255, 0) 36%),
-                var(--background);
-            background-attachment: fixed;
+            background: var(--paper);
+            color: var(--ink);
+            font-family: "IBM Plex Sans", Arial, sans-serif;
+            font-size: 17px;
+            line-height: 1.6;
         }
 
-        section {
-            scroll-margin-top: 95px;
+        a {
+            color: inherit;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
+        img {
+            display: block;
+            max-width: 100%;
         }
 
-        /* Header */
-        header {
-            background: rgba(5, 8, 22, 0.78);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border);
-            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1.5rem 0;
-        }
-
-        .brand {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.85rem;
-            text-decoration: none;
-        }
-
-        .brand-logo {
-            width: 72px;
-            height: 72px;
-            border-radius: 16px;
-            box-shadow: 0 12px 28px rgba(10, 20, 55, 0.35);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            object-fit: cover;
-        }
-
-        .brand-name {
-            color: var(--text);
-            letter-spacing: 0.02em;
-            font-size: 1.2rem;
+        .skip-link {
+            position: absolute;
+            left: 1rem;
+            top: -4rem;
+            z-index: 1000;
+            padding: 0.7rem 1rem;
+            background: var(--accent);
+            color: #16110e;
             font-weight: 600;
         }
 
-        .nav-content {
+        .skip-link:focus {
+            top: 1rem;
+        }
+
+        .container {
+            width: min(calc(100% - 3rem), var(--content));
+            margin-inline: auto;
+        }
+
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            background: rgba(17, 18, 16, 0.96);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .nav {
+            min-height: 68px;
             display: flex;
             align-items: center;
+            justify-content: space-between;
             gap: 2rem;
+        }
+
+        .wordmark {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .wordmark-mark {
+            display: inline-grid;
+            place-items: center;
+            width: 34px;
+            height: 34px;
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            font-family: "IBM Plex Mono", monospace;
+            font-size: 0.76rem;
+            letter-spacing: -0.08em;
         }
 
         .nav-links {
             display: flex;
-            gap: 2rem;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .social-links a {
-            color: var(--text);
-            text-decoration: none;
-            font-size: 1.25rem;
-            transition: color 0.2s;
-        }
-
-        .social-links a:hover {
-            color: var(--primary);
+            align-items: center;
+            gap: 1.5rem;
         }
 
         .nav-links a {
-            color: var(--text);
+            color: var(--muted);
+            font-family: "IBM Plex Mono", monospace;
+            font-size: 0.76rem;
+            letter-spacing: 0.04em;
             text-decoration: none;
-            font-weight: 500;
-            transition: color 0.2s;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary);
-        }
-
-        .nav-cta {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.4rem;
-            padding: 0.55rem 0.9rem;
-            border-radius: 999px;
-            border: 1px solid rgba(59, 102, 255, 0.55);
-            color: #d8e4ff;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.25s ease;
-        }
-
-        .nav-cta:hover {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: #031220;
-            box-shadow: 0 8px 22px rgba(59, 102, 255, 0.35);
-        }
-
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            color: var(--text);
-            cursor: pointer;
-        }
-
-        /* Hero Section */
-        .hero {
-            padding: 6rem 0;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            background:
-                radial-gradient(circle at 18% 10%, rgba(59, 102, 255, 0.28), transparent 32%),
-                radial-gradient(circle at 82% 18%, rgba(255, 107, 61, 0.2), transparent 30%),
-                linear-gradient(180deg, #050815 0%, #09132b 52%, #050815 100%);
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            width: 520px;
-            height: 520px;
-            right: -170px;
-            top: -140px;
-            border-radius: 50%;
-            border: 1px solid rgba(59, 102, 255, 0.25);
-            box-shadow: 0 0 120px rgba(59, 102, 255, 0.18);
-        }
-
-        .hero::after {
-            content: '';
-            position: absolute;
-            width: 360px;
-            height: 360px;
-            left: -140px;
-            bottom: -180px;
-            border-radius: 50%;
-            border: 1px solid rgba(255, 107, 61, 0.28);
-        }
-
-        .hero .container {
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero-brand {
-            display: inline-flex;
-            align-items: center;
-            gap: 1.1rem;
-            padding: 0.55rem 1.2rem 0.55rem 0.65rem;
-            border-radius: 999px;
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            background: rgba(6, 9, 26, 0.7);
-            box-shadow: 0 18px 30px rgba(6, 10, 34, 0.45);
-            margin-bottom: 1.5rem;
-        }
-
-        .hero-logo {
-            width: 112px;
-            height: 112px;
-            border-radius: 20px;
-            object-fit: cover;
-            box-shadow: 0 10px 22px rgba(20, 36, 90, 0.35);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .hero-brand-text {
-            text-align: left;
-        }
-
-        .hero-brand-text span {
-            display: block;
-            font-size: 0.85rem;
-            color: var(--text-light);
             text-transform: uppercase;
-            letter-spacing: 0.12em;
         }
 
-        .hero-brand-text strong {
-            display: block;
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: var(--text);
+        .nav-links a:hover,
+        .nav-links a:focus-visible {
+            color: var(--ink);
+        }
+
+        .nav-links .nav-contact {
+            color: var(--ink);
+            border-bottom: 1px solid var(--accent);
+        }
+
+        .hero {
+            min-height: calc(92vh - 68px);
+            display: grid;
+            align-items: center;
+            padding: 6rem 0;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1.55fr) minmax(250px, 0.45fr);
+            gap: clamp(3rem, 8vw, 8rem);
+            align-items: end;
+        }
+
+        .eyebrow,
+        .section-label,
+        .case-index,
+        .case-stack,
+        .archive-type,
+        .footer-label {
+            color: var(--accent);
+            font-family: "IBM Plex Mono", monospace;
+            font-size: 0.76rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
         }
 
         .hero h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: var(--text);
-            animation: fadeInUp 1s ease;
+            max-width: 870px;
+            margin: 1.25rem 0 1.5rem;
+            font-family: "Newsreader", Georgia, serif;
+            font-size: clamp(3.8rem, 7.4vw, 7.2rem);
+            font-weight: 500;
+            line-height: 0.94;
+            letter-spacing: -0.045em;
         }
 
-        .hero p {
-            font-size: 1.25rem;
-            color: var(--text-light);
-            max-width: 600px;
-            margin: 0 auto 2rem;
-            animation: fadeInUp 1s ease 0.2s;
-            animation-fill-mode: both;
+        .hero-intro {
+            max-width: 700px;
+            color: #d2cec5;
+            font-size: clamp(1.1rem, 1.6vw, 1.35rem);
+        }
+
+        .hero-personal {
+            max-width: 620px;
+            margin-top: 1rem;
+            color: var(--muted);
         }
 
         .hero-actions {
             display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin: 1.25rem 0 0.75rem;
-            flex-wrap: wrap;
-            animation: fadeInUp 1s ease 0.3s;
-            animation-fill-mode: both;
+            align-items: center;
+            gap: 1.4rem;
+            margin-top: 2.25rem;
         }
 
-        .cta-btn {
+        .hero-primary {
             display: inline-flex;
             align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            padding: 0.75rem 1.25rem;
-            border-radius: 10px;
-            text-decoration: none;
+            min-height: 48px;
+            padding: 0.7rem 1.1rem;
+            background: var(--accent);
+            color: #1a100c;
             font-weight: 600;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .cta-primary {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: #041525;
-            box-shadow: 0 10px 28px rgba(20, 184, 255, 0.35);
-        }
-
-        .cta-secondary {
-            background: rgba(10, 18, 34, 0.75);
-            color: var(--text);
-            border: 1px solid var(--border);
-        }
-
-        .cta-btn:hover {
-            transform: translateY(-2px);
-        }
-
-        .quick-facts {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 0.75rem;
-            margin: 0 auto;
-            max-width: 760px;
-            animation: fadeInUp 1s ease 0.25s;
-            animation-fill-mode: both;
-        }
-
-        .fact-pill {
-            background: rgba(10, 18, 34, 0.78);
-            border: 1px solid var(--border);
-            color: var(--text-light);
-            border-radius: 999px;
-            padding: 0.4rem 0.9rem;
-            font-size: 0.9rem;
-            font-weight: 500;
-        }
-
-        .availability-banner {
-            margin: 1.2rem auto 0;
-            padding: 0.7rem 1rem;
-            max-width: 820px;
-            border-radius: 10px;
-            background: rgba(20, 184, 255, 0.12);
-            border: 1px solid rgba(20, 184, 255, 0.35);
-            color: var(--text);
-            font-weight: 500;
-            animation: fadeInUp 1s ease 0.28s;
-            animation-fill-mode: both;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-top: 2rem;
-            animation: fadeInUp 1s ease 0.4s;
-            animation-fill-mode: both;
-        }
-
-        .social-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--text);
             text-decoration: none;
-            font-weight: 500;
-            padding: 0.75rem 1.5rem;
-            border-radius: 8px;
-            background: rgba(10, 18, 34, 0.76);
-            border: 1px solid var(--border);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-            transition: all 0.3s ease;
+            border: 1px solid var(--accent);
+            border-radius: var(--radius);
         }
 
-        .social-link:hover {
-            color: var(--primary);
-            transform: translateY(-2px);
-            box-shadow: 0 12px 30px rgba(20, 184, 255, 0.2);
+        .hero-primary:hover,
+        .hero-primary:focus-visible {
+            background: #ff825c;
         }
 
-        .social-link i {
-            font-size: 1.25rem;
+        .text-link {
+            color: var(--ink);
+            text-decoration-color: var(--accent);
+            text-underline-offset: 0.28em;
         }
 
-        /* Projects Section */
-        .projects {
-            padding: 4rem 0;
-            background:
-                linear-gradient(180deg, rgba(8, 16, 31, 0.85), rgba(7, 12, 24, 0.95)),
-                var(--background-alt);
+        .hero-aside {
+            padding-left: 1.5rem;
+            border-left: 1px solid var(--line);
         }
 
-        .section-title {
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 2rem;
-            text-align: center;
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 50px;
-            height: 3px;
-            background: var(--primary);
-            margin: 1rem auto;
-        }
-
-        .section-lead {
-            text-align: center;
-            color: var(--text-light);
-            max-width: 760px;
-            margin: -0.5rem auto 0;
-        }
-
-        .audience-section {
-            padding: 3.5rem 0;
-        }
-
-        .audience-grid {
+        .hero-aside dl {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
+            gap: 1.4rem;
         }
 
-        .audience-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 1.5rem;
-            backdrop-filter: blur(6px);
-            box-shadow: 0 14px 32px rgba(0, 0, 0, 0.28);
-        }
-
-        .audience-card h3 {
-            margin-bottom: 0.75rem;
-        }
-
-        .audience-card p {
-            color: var(--text-light);
-            margin-bottom: 0.75rem;
-        }
-
-        .audience-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .audience-list li {
-            color: var(--text-light);
-            margin-bottom: 0.5rem;
-            display: flex;
-            gap: 0.5rem;
-            align-items: center;
-        }
-
-        .audience-list li::before {
-            content: '•';
-            color: var(--primary);
-            font-weight: 700;
-        }
-
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .project-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            overflow: hidden;
-            backdrop-filter: blur(7px);
-            box-shadow: 0 16px 34px rgba(0, 0, 0, 0.28);
-            transition: all 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
-
-        .project-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.38);
-        }
-
-        .project-card.featured {
-            border: 2px solid var(--primary);
-            position: relative;
-        }
-
-        .featured-badge {
-            position: absolute;
-            top: 0.75rem;
-            right: 0.75rem;
-            background: var(--primary);
-            color: #fff;
-            padding: 0.35rem 0.7rem;
-            border-radius: 999px;
-            font-size: 0.8rem;
-            font-weight: 700;
-            z-index: 2;
-        }
-
-        .project-image-container {
-            position: relative;
-            width: 100%;
-            height: 200px;
-            background: linear-gradient(180deg, rgba(17, 28, 48, 0.95), rgba(8, 15, 29, 0.95));
-            border-radius: 8px 8px 0 0;
-            overflow: hidden;
-            cursor: pointer;
-        }
-
-        .project-image {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            transition: transform 0.3s ease;
-        }
-
-        .project-image-container:hover .project-image {
-            transform: scale(1.05);
-        }
-
-        .project-content {
-            padding: 1.5rem;
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-            height: 430px;
-            overflow-y: auto;
-            scrollbar-width: thin;
-            scrollbar-color: var(--primary) rgba(255, 255, 255, 0.08);
-        }
-
-        .project-content::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        .project-content::-webkit-scrollbar-track {
-            background: rgba(255, 255, 255, 0.06);
-            border-radius: 999px;
-        }
-
-        .project-content::-webkit-scrollbar-thumb {
-            background: linear-gradient(180deg, var(--primary), var(--secondary));
-            border-radius: 999px;
-        }
-
-        .project-title {
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        .project-description {
-            color: var(--text-light);
-            margin-bottom: 0;
-        }
-
-        .tech-stack {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-top: auto;
-            padding-top: 1rem;
-        }
-
-        .tech-tag {
-            background: rgba(7, 16, 31, 0.82);
-            padding: 0.25rem 0.75rem;
-            border-radius: 9999px;
-            font-size: 0.875rem;
-            color: var(--text-light);
-            border: 1px solid var(--border);
-            transition: all 0.2s ease;
-        }
-
-        .tech-tag:hover {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: #041525;
-        }
-
-        .project-details {
-            list-style: none;
-            margin: 1rem 0;
-            padding-left: 0;
-        }
-
-        .project-details li {
-            margin-bottom: 0.5rem;
-            color: var(--text-light);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .project-details li::before {
-            content: '•';
-            color: var(--primary);
-            font-weight: bold;
-        }
-
-        .project-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--primary);
-            text-decoration: none;
-            font-weight: 500;
-            margin-top: auto;
-            transition: gap 0.2s ease;
-        }
-
-        .project-link:hover {
-            gap: 0.75rem;
-        }
-
-        .project-link i {
-            font-size: 0.875rem;
-            transition: transform 0.2s ease;
-        }
-
-        .project-link:hover i {
-            transform: translateX(4px);
-        }
-
-        .projects-toggle-wrap {
-            text-align: center;
-            margin-top: 1.5rem;
-        }
-
-        .toggle-projects-btn {
-            border: 1px solid var(--border);
-            background: var(--card-bg);
-            color: var(--text);
-            padding: 0.75rem 1.1rem;
-            border-radius: 10px;
-            font-weight: 600;
-            cursor: pointer;
-        }
-
-        .toggle-projects-btn:hover {
-            border-color: var(--primary);
-            color: var(--primary);
-        }
-
-        .hidden-project {
-            display: none;
-        }
-
-        .services {
-            padding: 4rem 0;
-            background: var(--card-bg);
-        }
-
-        .recommendations {
-            padding: 4rem 0;
-            background:
-                linear-gradient(180deg, rgba(5, 9, 20, 0.92), rgba(8, 14, 30, 0.78)),
-                var(--background-alt);
-        }
-
-        .recommendations-grid {
-            display: grid;
-            grid-template-columns: repeat(4, minmax(0, 1fr));
-            gap: 1.2rem;
-            margin-top: 2rem;
-        }
-
-        .recommendation-card {
-            min-height: 320px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            padding: 1.35rem;
-            border-radius: 24px;
-            background:
-                linear-gradient(180deg, rgba(13, 19, 40, 0.96), rgba(9, 14, 32, 0.9));
-            border: 1px solid rgba(84, 116, 170, 0.35);
-            box-shadow: 0 20px 40px rgba(2, 6, 20, 0.34);
-            backdrop-filter: blur(8px);
-            color: var(--text);
-            transition: transform 0.25s ease, box-shadow 0.25s ease;
-        }
-
-        .recommendation-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 24px 44px rgba(2, 6, 20, 0.42);
-        }
-
-        .recommendation-quote {
-            font-size: 3rem;
-            line-height: 1;
-            color: rgba(159, 189, 255, 0.42);
-            margin-bottom: 0.85rem;
-            font-weight: 700;
-        }
-
-        .recommendation-copy {
-            color: var(--text);
-            font-size: 1.05rem;
-            line-height: 1.45;
-            font-weight: 500;
-            margin: 0;
-        }
-
-        .recommendation-footer {
-            display: flex;
-            flex-direction: column;
-            align-items: stretch;
-            gap: 0.85rem;
-            margin-top: 1.25rem;
-            padding-top: 1rem;
-            border-top: 1px solid rgba(159, 180, 214, 0.14);
-        }
-
-        .recommendation-person {
-            display: flex;
-            align-items: flex-start;
-            gap: 0.8rem;
-            min-width: 0;
-        }
-
-        .recommendation-avatar {
-            width: 2.8rem;
-            height: 2.8rem;
-            border-radius: 50%;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: #ffffff;
-            font-weight: 700;
-            font-size: 0.92rem;
-            flex-shrink: 0;
-        }
-
-        .recommendation-meta {
-            min-width: 0;
-        }
-
-        .recommendation-name {
-            color: var(--text);
-            font-size: 0.96rem;
-            font-weight: 700;
-            margin: 0;
-        }
-
-        .recommendation-role {
-            color: var(--text-light);
-            font-size: 0.84rem;
-            line-height: 1.35;
-            margin: 0.2rem 0 0;
-        }
-
-        .recommendation-actions {
-            display: flex;
-            justify-content: flex-end;
-        }
-
-        .recommendation-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.35rem;
-            color: var(--primary);
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 0.82rem;
+        .hero-aside dt {
+            margin-bottom: 0.2rem;
+            color: var(--muted);
+            font-family: "IBM Plex Mono", monospace;
+            font-size: 0.72rem;
+            letter-spacing: 0.06em;
             text-transform: uppercase;
-            letter-spacing: 0.04em;
-            white-space: nowrap;
-            transition: color 0.2s ease, transform 0.2s ease;
         }
 
-        .recommendation-link:hover {
-            color: var(--secondary);
-            transform: translateY(-1px);
+        .hero-aside dd {
+            color: var(--ink);
+            font-size: 0.98rem;
         }
 
-        .services-grid {
+        section {
+            scroll-margin-top: 68px;
+        }
+
+        .section {
+            padding: clamp(5rem, 9vw, 8rem) 0;
+            border-top: 1px solid var(--line);
+        }
+
+        .section-heading {
+            display: grid;
+            grid-template-columns: 0.42fr 1.58fr;
+            gap: 2rem;
+            align-items: start;
+            margin-bottom: clamp(3rem, 7vw, 5rem);
+        }
+
+        .section-heading h2 {
+            max-width: 740px;
+            font-family: "Newsreader", Georgia, serif;
+            font-size: clamp(2.7rem, 5.4vw, 5rem);
+            font-weight: 500;
+            line-height: 1;
+            letter-spacing: -0.035em;
+        }
+
+        .section-heading p {
+            max-width: 660px;
+            margin-top: 1rem;
+            color: var(--muted);
+        }
+
+        .case-studies {
+            display: grid;
+            gap: 0;
+        }
+
+        .case-study {
+            display: grid;
+            grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+            gap: clamp(2rem, 6vw, 5rem);
+            padding: clamp(3rem, 6vw, 5rem) 0;
+            border-top: 1px solid var(--line);
+            align-items: center;
+        }
+
+        .case-study:last-child {
+            border-bottom: 1px solid var(--line);
+        }
+
+        .case-media {
+            min-height: 390px;
+            display: grid;
+            place-items: center;
+            padding: clamp(1.5rem, 4vw, 3rem);
+            overflow: hidden;
+            background: var(--paper-soft);
+            border-radius: var(--radius);
+        }
+
+        .case-media img {
+            width: 100%;
+            max-height: 360px;
+            object-fit: contain;
+        }
+
+        .case-study h3 {
+            margin: 0.9rem 0 1rem;
+            font-family: "Newsreader", Georgia, serif;
+            font-size: clamp(2.1rem, 4vw, 3.6rem);
+            font-weight: 500;
+            line-height: 1.02;
+            letter-spacing: -0.025em;
+        }
+
+        .case-summary {
+            color: #d0ccc3;
+            font-size: 1.08rem;
+        }
+
+        .case-details {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .case-details h4 {
+            margin-bottom: 0.45rem;
+            color: var(--muted);
+            font-family: "IBM Plex Mono", monospace;
+            font-size: 0.72rem;
+            font-weight: 500;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+
+        .case-details p {
+            font-size: 0.96rem;
+        }
+
+        .case-stack {
+            color: var(--muted);
+            line-height: 1.7;
+            text-transform: none;
+        }
+
+        .case-link {
+            display: inline-block;
+            margin-top: 1.3rem;
+            color: var(--ink);
+            font-weight: 600;
+            text-decoration-color: var(--accent);
+            text-underline-offset: 0.3em;
+        }
+
+        .proof-grid {
             display: grid;
             grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 1.2rem;
-            margin-top: 2rem;
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
         }
 
-        .service-card {
-            min-height: 240px;
-            display: flex;
-            flex-direction: column;
-            padding: 1.35rem;
-            border-radius: 24px;
-            background:
-                linear-gradient(180deg, rgba(13, 19, 40, 0.96), rgba(9, 14, 32, 0.9));
-            border: 1px solid rgba(84, 116, 170, 0.35);
-            box-shadow: 0 20px 40px rgba(2, 6, 20, 0.34);
-            backdrop-filter: blur(8px);
-            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        .proof-item {
+            padding: 2rem 1.5rem 2rem 0;
         }
 
-        .service-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 24px 44px rgba(2, 6, 20, 0.42);
+        .proof-item + .proof-item {
+            padding-left: 1.5rem;
+            border-left: 1px solid var(--line);
         }
 
-        .service-card h3 {
-            font-size: 1.08rem;
-            line-height: 1.35;
-            margin-bottom: 0.75rem;
-            color: var(--text);
+        .proof-value {
+            display: block;
+            margin-bottom: 0.4rem;
+            font-family: "Newsreader", Georgia, serif;
+            font-size: clamp(2.8rem, 5vw, 4.5rem);
+            line-height: 1;
         }
 
-        .service-duration {
-            display: inline-flex;
-            align-items: center;
-            width: fit-content;
-            margin-bottom: 1rem;
-            padding: 0.35rem 0.7rem;
-            border-radius: 999px;
-            background: rgba(59, 102, 255, 0.14);
-            border: 1px solid rgba(59, 102, 255, 0.28);
-            color: #d7e4ff;
-            font-size: 0.8rem;
-            font-weight: 600;
-            letter-spacing: 0.04em;
+        .proof-copy {
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        .experience-note {
+            display: grid;
+            grid-template-columns: 0.42fr 1.58fr;
+            gap: 2rem;
+            margin-top: 3.5rem;
+        }
+
+        .experience-note p {
+            max-width: 770px;
+            font-size: clamp(1.15rem, 2.2vw, 1.6rem);
+        }
+
+        .experience-note span {
+            color: var(--muted);
+            font-family: "IBM Plex Mono", monospace;
+            font-size: 0.76rem;
             text-transform: uppercase;
         }
 
-        .service-card p {
-            color: var(--text-light);
-            line-height: 1.5;
+        .engagements {
+            border-top: 1px solid var(--line);
+        }
+
+        .engagement-row {
+            display: grid;
+            grid-template-columns: 0.24fr 0.54fr 1.1fr 0.34fr;
+            gap: 1.5rem;
+            align-items: baseline;
+            padding: 1.8rem 0;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .engagement-number,
+        .engagement-duration {
+            color: var(--muted);
+            font-family: "IBM Plex Mono", monospace;
+            font-size: 0.76rem;
+            text-transform: uppercase;
+        }
+
+        .engagement-row h3 {
+            font-family: "Newsreader", Georgia, serif;
+            font-size: clamp(1.55rem, 2.6vw, 2.2rem);
+            font-weight: 500;
+        }
+
+        .engagement-row p {
+            color: var(--muted);
+        }
+
+        .reference-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: clamp(2rem, 7vw, 6rem);
+        }
+
+        .reference-quote {
+            padding-top: 1.5rem;
+            border-top: 2px solid var(--accent);
+        }
+
+        .reference-quote blockquote {
+            font-family: "Newsreader", Georgia, serif;
+            font-size: clamp(1.65rem, 3vw, 2.5rem);
+            line-height: 1.18;
+        }
+
+        .reference-quote footer {
+            margin-top: 1.5rem;
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .reference-quote footer strong {
+            display: block;
+            color: var(--ink);
+            font-weight: 500;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 0.65fr 1.35fr;
+            gap: clamp(3rem, 9vw, 8rem);
+        }
+
+        .about-intro {
+            font-family: "Newsreader", Georgia, serif;
+            font-size: clamp(2rem, 3.8vw, 3.3rem);
+            line-height: 1.08;
+        }
+
+        .about-copy {
+            display: grid;
+            gap: 1.25rem;
+            color: #cfcbc2;
+        }
+
+        .about-copy ul {
+            list-style: none;
+            border-top: 1px solid var(--line);
+        }
+
+        .about-copy li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .archive-list {
+            list-style: none;
+            border-top: 1px solid var(--line);
+        }
+
+        .archive-list li {
+            display: grid;
+            grid-template-columns: 1.3fr 0.7fr;
+            gap: 2rem;
+            padding: 1.15rem 0;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .archive-type {
+            color: var(--muted);
+            text-align: right;
+        }
+
+        .technical-profile {
+            display: grid;
+            grid-template-columns: 0.42fr 1.58fr;
+            gap: 2rem;
+            margin-top: 3.5rem;
+        }
+
+        .technical-profile p {
+            max-width: 780px;
+            color: var(--muted);
+            font-family: "IBM Plex Mono", monospace;
+            font-size: 0.9rem;
+            line-height: 1.9;
         }
 
         .contact {
-            padding: 4rem 0;
+            padding: clamp(5rem, 10vw, 9rem) 0 3rem;
+            border-top: 1px solid var(--line);
         }
 
-        .contact-card {
-            max-width: 860px;
-            margin: 0 auto;
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: 14px;
-            padding: 2rem;
-            text-align: center;
-            backdrop-filter: blur(8px);
-            box-shadow: 0 14px 34px rgba(0, 0, 0, 0.34);
-        }
-
-        .contact-card p {
-            color: var(--text-light);
-            margin-bottom: 1rem;
+        .contact h2 {
+            max-width: 900px;
+            margin: 1rem 0 2rem;
+            font-family: "Newsreader", Georgia, serif;
+            font-size: clamp(3.4rem, 7vw, 6.8rem);
+            font-weight: 500;
+            line-height: 0.95;
+            letter-spacing: -0.04em;
         }
 
         .contact-actions {
             display: flex;
-            justify-content: center;
-            gap: 0.8rem;
+            gap: 1.5rem;
             flex-wrap: wrap;
         }
 
-        /* About Section */
-        .about {
-            padding: 4rem 0;
-            background: transparent;
-        }
-
-        .about-content {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        /* Skills Section */
-        .skills {
-            padding: 4rem 0;
-            background: linear-gradient(180deg, rgba(8, 15, 29, 0.55), rgba(5, 9, 20, 0.95));
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        .site-footer {
+            display: flex;
+            justify-content: space-between;
             gap: 2rem;
-            margin-top: 2rem;
+            margin-top: 7rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--line);
+            color: var(--muted);
+            font-family: "IBM Plex Mono", monospace;
+            font-size: 0.75rem;
         }
 
-        .skill-category {
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            padding: 1.5rem;
-            border-radius: 10px;
-            box-shadow: 0 14px 30px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease;
+        :focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 4px;
         }
 
-        .skill-category:hover {
-            transform: translateY(-5px);
-        }
-
-        .skill-category h3 {
-            margin-bottom: 1rem;
-            color: var(--text);
-        }
-
-        .skill-list {
-            list-style: none;
-        }
-
-        .skill-list li {
-            margin-bottom: 0.5rem;
-            color: var(--text-light);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .skill-list li::before {
-            content: '▹';
-            color: var(--primary);
-        }
-
-        /* Footer */
-        footer {
-            padding: 2rem 0;
-            text-align: center;
-            color: var(--text-light);
-            font-size: 0.875rem;
-            background: var(--card-bg);
-            border-top: 1px solid var(--border);
-        }
-
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
+        @media (max-width: 900px) {
+            .hero {
+                min-height: auto;
             }
-            to {
-                opacity: 1;
-                transform: translateY(0);
+
+            .hero-grid,
+            .section-heading,
+            .case-study,
+            .experience-note,
+            .about-grid,
+            .technical-profile {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-aside {
+                padding: 1.5rem 0 0;
+                border-left: 0;
+                border-top: 1px solid var(--line);
+            }
+
+            .case-media {
+                min-height: 300px;
+            }
+
+            .engagement-row {
+                grid-template-columns: 0.18fr 0.82fr;
+            }
+
+            .engagement-row p,
+            .engagement-duration {
+                grid-column: 2;
             }
         }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
+        @media (max-width: 680px) {
+            body {
+                font-size: 16px;
+            }
+
+            .container {
+                width: min(calc(100% - 2rem), var(--content));
+            }
+
+            .nav {
+                min-height: 60px;
+            }
+
+            .nav-links a:not(.nav-contact) {
+                display: none;
+            }
+
+            .hero {
+                padding: 4.5rem 0;
+            }
+
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: clamp(3.25rem, 15vw, 5rem);
             }
 
-            .brand-logo {
-                width: 56px;
-                height: 56px;
-                border-radius: 12px;
-            }
-
-            .brand-name {
-                font-size: 1rem;
-            }
-
-            .hero-brand {
+            .hero-actions {
+                align-items: flex-start;
                 flex-direction: column;
-                padding: 0.75rem 1rem;
             }
 
-            .hero-logo {
-                width: 88px;
-                height: 88px;
+            .proof-grid,
+            .reference-grid {
+                grid-template-columns: 1fr;
             }
 
-            .hero-brand-text {
-                text-align: center;
+            .proof-item,
+            .proof-item + .proof-item {
+                padding: 1.4rem 0;
+                border-left: 0;
+                border-bottom: 1px solid var(--line);
             }
 
-            .mobile-menu-btn {
-                display: block;
-            }
-
-            .nav-cta {
-                display: none;
-            }
-
-            .nav-links {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: rgba(6, 11, 22, 0.97);
+            .case-media {
+                min-height: 230px;
                 padding: 1rem;
+            }
+
+            .case-details {
+                grid-template-columns: 1fr;
+            }
+
+            .archive-list li {
+                grid-template-columns: 1fr;
+                gap: 0.2rem;
+            }
+
+            .archive-type {
+                text-align: left;
+            }
+
+            .site-footer {
                 flex-direction: column;
-                align-items: center;
-                box-shadow: 0 10px 28px rgba(0, 0, 0, 0.4);
-            }
-
-            .nav-links.active {
-                display: flex;
-            }
-
-            .project-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .project-content {
-                height: 380px;
-            }
-
-            .contact-card {
-                padding: 1.25rem;
-            }
-
-            .recommendations-grid {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-            }
-
-            .recommendation-card {
-                min-height: 250px;
-            }
-
-            .recommendation-copy {
-                font-size: 0.98rem;
-            }
-
-            .services-grid {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
+                margin-top: 5rem;
             }
         }
 
-        @media (max-width: 560px) {
-            .recommendations-grid {
-                grid-template-columns: 1fr;
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
             }
-
-            .recommendation-actions {
-                justify-content: flex-start;
-            }
-
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .achievement-list {
-            list-style: none;
-            margin: 1rem 0;
-            padding-left: 0;
-        }
-
-        .achievement-list li {
-            margin-bottom: 0.5rem;
-            color: var(--text-light);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .achievement-list li::before {
-            content: '•';
-            color: var(--primary);
-            font-weight: bold;
-        }
-
-        .star-method {
-            display: flex;
-            flex-direction: column;
-            gap: 0.75rem;
-        }
-
-        .star-method h4 {
-            color: var(--primary);
-            font-size: 1rem;
-            margin: 0;
-        }
-
-        .star-method p {
-            margin: 0;
-            color: var(--text-light);
-        }
-
-        .about-content {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: left;
-        }
-
-        .about-content p {
-            margin-bottom: 1rem;
-        }
-
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.9);
-            z-index: 1000;
-            padding: 2rem;
-            box-sizing: border-box;
-        }
-
-        .modal-content {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .modal-image {
-            max-width: 90%;
-            max-height: 90%;
-            object-fit: contain;
-            border-radius: 4px;
-        }
-
-        .close-modal {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            color: white;
-            font-size: 2rem;
-            cursor: pointer;
-            background: none;
-            border: none;
-            padding: 0.5rem;
-            z-index: 1001;
-        }
-
-        .modal.active {
-            display: block;
-        }
-
-        .professional-title {
-            font-size: 1.5rem;
-            color: var(--primary);
-            font-weight: 600;
-            margin-bottom: 1rem;
-            animation: fadeInUp 1s ease 0.1s;
-            animation-fill-mode: both;
-        }
-
-        .nav-button {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(0, 0, 0, 0.5);
-            color: white;
-            border: none;
-            padding: 1rem;
-            cursor: pointer;
-            font-size: 1.5rem;
-            transition: background-color 0.3s;
-            z-index: 1001;
-        }
-
-        .nav-button:hover {
-            background: rgba(0, 0, 0, 0.8);
-        }
-
-        .prev-button {
-            left: 1rem;
-        }
-
-        .next-button {
-            right: 1rem;
         }
     </style>
 </head>
 <body>
-    <header>
-        <nav class="container">
-            <a class="brand" href="#">
-                <img src="images/data-citizen-logo-transparent.png" alt="Data Citizen logo" class="brand-logo">
-                <span class="brand-name">Data Citizen</span>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <nav class="container nav" aria-label="Main navigation">
+            <a class="wordmark" href="#" aria-label="Jhon Lucas, home">
+                <span class="wordmark-mark" aria-hidden="true">DC</span>
+                <span>Jhon Lucas</span>
             </a>
-            <div class="nav-content">
-                <div class="nav-links">
-                    <a href="#about">About</a>
-                    <a href="#recommendations">Recommendations</a>
-                    <a href="#services">Services</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#skills">Skills</a>
-                    <a href="#contact">Contact</a>
-                </div>
-                <a href="https://calendly.com/jhonlucas/one-on-one-with-jhon" target="_blank" rel="noopener noreferrer" class="nav-cta">Hire Me</a>
+            <div class="nav-links">
+                <a href="#work">Work</a>
+                <a href="#experience">Experience</a>
+                <a href="#about">About</a>
+                <a class="nav-contact" href="#contact">Contact</a>
             </div>
-            <button class="mobile-menu-btn">
-                <i class="fas fa-bars"></i>
-            </button>
         </nav>
     </header>
 
-    <section class="hero">
-        <div class="container">
-            <div class="hero-brand">
-                <img src="images/data-citizen-logo-transparent.png" alt="Data Citizen logo" class="hero-logo">
-                <div class="hero-brand-text">
-                    <span>Data Citizen</span>
-                    <strong>Data &amp; AI Consultancy</strong>
+    <main id="main">
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="container hero-grid">
+                <div>
+                    <p class="eyebrow">Jhon Lucas · Data &amp; AI Engineering Consultant</p>
+                    <h1 id="hero-title">I build data systems that survive production.</h1>
+                    <p class="hero-intro">Data platforms, AI workflows, and blockchain infrastructure for teams that need dependable systems—not another prototype.</p>
+                    <p class="hero-personal">I like messy data, clear systems, and infrastructure that becomes boring for the right reasons.</p>
+                    <div class="hero-actions">
+                        <a class="hero-primary" href="#work">See selected work</a>
+                        <a class="text-link" href="https://calendly.com/jhonlucas/one-on-one-with-jhon" target="_blank" rel="noopener noreferrer">Book a conversation ↗</a>
+                    </div>
+                </div>
+                <aside class="hero-aside" aria-label="Professional profile">
+                    <dl>
+                        <div>
+                            <dt>Based in</dt>
+                            <dd>Brazil · working remotely</dd>
+                        </div>
+                        <div>
+                            <dt>Experience</dt>
+                            <dd>8+ years in data engineering</dd>
+                        </div>
+                        <div>
+                            <dt>Recent focus</dt>
+                            <dd>Production AI and Web3 data</dd>
+                        </div>
+                        <div>
+                            <dt>Availability</dt>
+                            <dd>Focused consulting engagements</dd>
+                        </div>
+                    </dl>
+                </aside>
+            </div>
+        </section>
+
+        <section id="work" class="section" aria-labelledby="work-title">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="section-label">01 / Selected work</p>
+                    <div>
+                        <h2 id="work-title">Three systems, shown with the difficult parts included.</h2>
+                        <p>Architecture matters, but so do recovery, deployment, observability, and the handoff to the people who operate what was built.</p>
+                    </div>
+                </div>
+
+                <div class="case-studies">
+                    <article class="case-study">
+                        <div class="case-media">
+                            <img src="images/uniswap-event-streamer.svg" alt="Architecture diagram for the Uniswap V3 event streaming system">
+                        </div>
+                        <div>
+                            <p class="case-index">Case 01 · Web3 streaming</p>
+                            <h3>Uniswap V3 Event Streamer</h3>
+                            <p class="case-summary">A production-style event pipeline that turns raw Uniswap activity into a restart-safe, observable stream for downstream analytics.</p>
+                            <div class="case-details">
+                                <div>
+                                    <h4>The hard part</h4>
+                                    <p>Handling checkpoints and chain reorganizations without corrupting downstream state.</p>
+                                </div>
+                                <div>
+                                    <h4>The system</h4>
+                                    <p>Decoupled Kafka producers and consumers with PostgreSQL, Prometheus, and Grafana.</p>
+                                </div>
+                            </div>
+                            <p class="case-stack">Python, Kafka, PostgreSQL, Docker, Prometheus, Grafana</p>
+                            <a class="case-link" href="https://github.com/l-jhon/uniswap-v3-event-streamer" target="_blank" rel="noopener noreferrer">Read the repository ↗</a>
+                        </div>
+                    </article>
+
+                    <article class="case-study">
+                        <div class="case-media">
+                            <img src="images/image16.png" alt="Architecture diagram for a large-scale marketplace data lakehouse">
+                        </div>
+                        <div>
+                            <p class="case-index">Case 02 · Data platform</p>
+                            <h3>Marketplace Data Lakehouse</h3>
+                            <p class="case-summary">A shared AWS data platform built to make more than 35TB of marketplace data accessible across analytics and business teams.</p>
+                            <div class="case-details">
+                                <div>
+                                    <h4>The hard part</h4>
+                                    <p>Bringing 30+ databases and 300+ tables into a platform that could scale without creating another operational bottleneck.</p>
+                                </div>
+                                <div>
+                                    <h4>The system</h4>
+                                    <p>Spark on EMR with Hudi, Athena, ECS ingestion, Airbyte, Airflow, and Power BI on top of S3.</p>
+                                </div>
+                            </div>
+                            <p class="case-stack">AWS, Spark, EMR, Hudi, Athena, Airflow, Airbyte, Power BI</p>
+                        </div>
+                    </article>
+
+                    <article class="case-study">
+                        <div class="case-media">
+                            <img src="images/image_mermaid.png" alt="Architecture diagram for the automated data pipeline factory">
+                        </div>
+                        <div>
+                            <p class="case-index">Case 03 · Platform automation</p>
+                            <h3>Data Pipeline Factory</h3>
+                            <p class="case-summary">A reusable framework that moved data work out of notebooks and into standardized, production-ready pipelines.</p>
+                            <div class="case-details">
+                                <div>
+                                    <h4>The result</h4>
+                                    <p>Cut initial setup from days to minutes and reduced pipeline delivery from roughly one month to 1–2 weeks.</p>
+                                </div>
+                                <div>
+                                    <h4>The system</h4>
+                                    <p>YAML-driven project scaffolding and Airflow DAG generation, deployed through Docker, ECS, Terraform, and CI/CD.</p>
+                                </div>
+                            </div>
+                            <p class="case-stack">Python, Airflow, YAML, Docker, AWS ECS, Terraform, CI/CD</p>
+                        </div>
+                    </article>
                 </div>
             </div>
-            <h1>Data, AI &amp; Analytics Solutions | Portfolio &amp; Services</h1>
-            <p class="professional-title">Founder | Data &amp; AI Engineering Consultant</p>
-            <p>I design and deliver data platforms and AI agent workflows that turn complex data into reliable products, decisions, and growth.</p>
-            <div class="quick-facts">
-                <span class="fact-pill">8+ years in data engineering</span>
-                <span class="fact-pill">AI agent and LLM workflow delivery</span>
-                <span class="fact-pill">Web2 + Web3 production systems</span>
-                <span class="fact-pill">50-70% faster pipeline delivery</span>
-                <span class="fact-pill">Cloud cost reductions up to 30%</span>
-            </div>
-            <p class="availability-banner">Open to part-time consulting and freelance engagements in data and AI (10-20 hours/week).</p>
-            <div class="hero-actions">
-                <a href="#projects" class="cta-btn cta-primary">
-                    <i class="fas fa-bolt"></i>
-                    <span>View Featured Work</span>
-                </a>
-                <a href="https://calendly.com/jhonlucas/one-on-one-with-jhon" target="_blank" rel="noopener noreferrer" class="cta-btn cta-secondary">
-                    <i class="fas fa-calendar-check"></i>
-                    <span>Book a 30-min Call</span>
-                </a>
-                <a href="https://github.com/l-jhon/uniswap-v3-event-streamer" target="_blank" rel="noopener noreferrer" class="cta-btn cta-secondary">
-                    <i class="fab fa-github"></i>
-                    <span>Latest Project</span>
-                </a>
-            </div>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/jhon-lucas/" target="_blank" rel="noopener noreferrer" class="social-link">
-                    <i class="fab fa-linkedin"></i>
-                    <span>LinkedIn</span>
-                </a>
-                <a href="https://github.com/l-jhon" target="_blank" rel="noopener noreferrer" class="social-link">
-                    <i class="fab fa-github"></i>
-                    <span>GitHub</span>
-                </a>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="audience-section">
-        <div class="container">
-            <h2 class="section-title">How I Can Help</h2>
-            <p class="section-lead">Clear value for full-time opportunities and consulting engagements in data and AI.</p>
-            <div class="audience-grid">
-                <article class="audience-card">
-                    <h3>For Hiring Teams</h3>
-                    <p>I lead and deliver reliable data and AI systems that improve decision velocity and reduce operational cost.</p>
-                    <ul class="audience-list">
-                        <li>Senior-level ownership from architecture to production</li>
-                        <li>Cross-functional collaboration with analytics, product, and AI teams</li>
-                        <li>Track record of measurable impact across data and AI initiatives</li>
-                    </ul>
-                </article>
-                <article class="audience-card">
-                    <h3>For Consulting Clients</h3>
-                    <p>I execute scoped, high-impact data and AI projects quickly with maintainable code and direct business outcomes.</p>
-                    <ul class="audience-list">
-                        <li>Fast delivery for MVP and production hardening phases</li>
-                        <li>Clear communication, practical tradeoffs, and reliable handoff</li>
-                        <li>Flexible part-time model for ongoing improvement work</li>
-                    </ul>
-                </article>
+        <section id="experience" class="section" aria-labelledby="experience-title">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="section-label">02 / Evidence</p>
+                    <div>
+                        <h2 id="experience-title">The work is measured after it ships.</h2>
+                        <p>Selected outcomes from data-platform and infrastructure work across startups, marketplaces, and Web3 teams.</p>
+                    </div>
+                </div>
+                <div class="proof-grid" aria-label="Selected professional outcomes">
+                    <div class="proof-item">
+                        <strong class="proof-value">8+</strong>
+                        <p class="proof-copy">years building and operating data systems</p>
+                    </div>
+                    <div class="proof-item">
+                        <strong class="proof-value">50–70%</strong>
+                        <p class="proof-copy">faster pipeline delivery through reusable platform patterns</p>
+                    </div>
+                    <div class="proof-item">
+                        <strong class="proof-value">30%</strong>
+                        <p class="proof-copy">cloud-cost reduction through ECS and Iceberg migrations</p>
+                    </div>
+                </div>
+                <div class="experience-note">
+                    <span>Selected experience</span>
+                    <p>Spectral Labs, OpenBlock Labs, and Olist—working across platform architecture, analytics engineering, infrastructure, and technical mentorship.</p>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="about" class="about">
-        <div class="container">
-            <div class="about-content">
-                <h2 class="section-title">About Me</h2>
-                <p>I'm a Data and AI Engineering Consultant focused on building scalable systems that make data reliable, accessible, and actionable for teams.</p>
-                
-                <p>With 8+ years of experience across startups and Web3, I focus on designing modern data platforms, automating pipelines, building AI agent workflows, and optimizing cloud infrastructure for performance and cost.</p>
-                
-                <p>At companies like Spectral Labs, OpenBlock Labs, and Olist, I've had the opportunity to:</p>
-                <ul class="achievement-list">
-                    <li>Reduce pipeline delivery time by 50–70%</li>
-                    <li>Build data models and reusable frameworks to help Data Scientists, Data Analysts, and Data Engineers improve their workflows working with DeFi ecosystems</li>
-                    <li>Design and implement AI agent workflows with retrieval and tool-calling for operations and analytics use cases</li>
-                    <li>Migrate workflows to ECS and Iceberg, helping cut cloud costs by up to 30%</li>
-                    <li>Enable faster insights with tools like Spark, dbt, and AWS-native services</li>
+        <section id="services" class="section" aria-labelledby="services-title">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="section-label">03 / Work with me</p>
+                    <div>
+                        <h2 id="services-title">Start with the shape of the problem.</h2>
+                        <p>I usually work through one of three formats. Each is scoped around a concrete decision, system, or operating problem.</p>
+                    </div>
+                </div>
+                <div class="engagements">
+                    <article class="engagement-row">
+                        <span class="engagement-number">01</span>
+                        <h3>Technical audit</h3>
+                        <p>Find the reliability, cost, and maintainability risks in an existing data platform, then turn them into a prioritized roadmap.</p>
+                        <span class="engagement-duration">Usually 1 week</span>
+                    </article>
+                    <article class="engagement-row">
+                        <span class="engagement-number">02</span>
+                        <h3>Build sprint</h3>
+                        <p>Design and ship a focused production system: orchestration, transformations, an AI workflow, or event ingestion.</p>
+                        <span class="engagement-duration">Usually 2–5 weeks</span>
+                    </article>
+                    <article class="engagement-row">
+                        <span class="engagement-number">03</span>
+                        <h3>Ongoing advisory</h3>
+                        <p>Support architecture decisions, production hardening, cost control, and team practices without adding a full-time role.</p>
+                        <span class="engagement-duration">Part-time</span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="references" class="section" aria-labelledby="references-title">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="section-label">04 / References</p>
+                    <div>
+                        <h2 id="references-title">What collaborators remember.</h2>
+                    </div>
+                </div>
+                <div class="reference-grid">
+                    <figure class="reference-quote">
+                        <blockquote>“One of the strongest data engineers I've had the chance to collaborate with. His AWS knowledge is impressive, and he always figured things out fast.”</blockquote>
+                        <footer>
+                            <strong>Murathan Bağdat</strong>
+                            DeFi Risk Analyst at Chaos Labs · <a class="text-link" href="https://www.linkedin.com/in/murathanbagdat/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+                        </footer>
+                    </figure>
+                    <figure class="reference-quote">
+                        <blockquote>“Strong data engineering expertise, ownership, and practical problem-solving. He played a key role in building the data platform, feature store, and APIs.”</blockquote>
+                        <footer>
+                            <strong>Zhou Zhang</strong>
+                            Data at Meta · <a class="text-link" href="https://www.linkedin.com/in/zhouzhang2017/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+                        </footer>
+                    </figure>
+                    <figure class="reference-quote">
+                        <blockquote>“Thoughtful, efficient, and takes ownership. He consistently delivered reliable, high-quality data infrastructure.”</blockquote>
+                        <footer>
+                            <strong>Sishir Varghese</strong>
+                            CEO &amp; Co-Founder at The Grid and Spectral Finance · <a class="text-link" href="https://www.linkedin.com/in/sishir-varghese-47576b2a/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+                        </footer>
+                    </figure>
+                    <figure class="reference-quote">
+                        <blockquote>“Turns complex blockchain and DeFi data into something reliable and actionable. A pragmatic partner across platform, analytics, and modeling work.”</blockquote>
+                        <footer>
+                            <strong>Zane Peycke</strong>
+                            Head of Machine Learning at The Grid · <a class="text-link" href="https://www.linkedin.com/in/peycke/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+                        </footer>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section" aria-labelledby="about-title">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="section-label">05 / About</p>
+                    <div>
+                        <h2 id="about-title">A data engineer who cares about the operating system around the code.</h2>
+                    </div>
+                </div>
+                <div class="about-grid">
+                    <p class="about-intro">I enjoy turning complicated systems into dependable infrastructure that teams can understand and own.</p>
+                    <div class="about-copy">
+                        <p>I'm Jhon Lucas, a data and AI engineering consultant based in Brazil. Over the past eight years, I've worked across startups, marketplaces, and Web3—building platforms, automating delivery, and helping teams make better technical decisions.</p>
+                        <p>I work comfortably across Python, Spark, dbt, Terraform, ECS, FastAPI, and modern AI tooling. The technology matters, but I care more about the habits that keep systems useful after the initial launch.</p>
+                        <ul aria-label="Working principles">
+                            <li>Make failure modes visible before they become incidents.</li>
+                            <li>Choose boring infrastructure when boring is enough.</li>
+                            <li>Write systems and documentation for the next person.</li>
+                            <li>Measure success in operational outcomes, not diagram complexity.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="archive" class="section" aria-labelledby="archive-title">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="section-label">06 / Project archive</p>
+                    <div>
+                        <h2 id="archive-title">More systems built along the way.</h2>
+                        <p>A compact record of platform, analytics, infrastructure, and applied-data work.</p>
+                    </div>
+                </div>
+                <ul class="archive-list">
+                    <li><span>Cross-chain dbt transformation layer</span><span class="archive-type">Analytics engineering</span></li>
+                    <li><span>Data Lakehouse for blockchain and DeFi sources</span><span class="archive-type">Data architecture</span></li>
+                    <li><span>On-chain credit-score pipeline with an Erigon node</span><span class="archive-type">Blockchain data</span></li>
+                    <li><span>Private-network MWAA deployment</span><span class="archive-type">Cloud infrastructure</span></li>
+                    <li><span>Automated Dune Analytics ingestion</span><span class="archive-type">Platform automation</span></li>
+                    <li><span>Lambda observability and Slack alerting</span><span class="archive-type">Reliability</span></li>
+                    <li><span>Inventory-transfer model to reduce stockouts</span><span class="archive-type">Applied analytics</span></li>
+                    <li><span>Real-time CRM event ingestion</span><span class="archive-type">Event pipelines</span></li>
                 </ul>
-                
-                <p>I enjoy working across Python, Spark, dbt, Terraform, ECS, FastAPI, and more — but what I really care about is solving real problems, mentoring teams, and delivering clean, maintainable solutions.</p>
+                <div class="technical-profile">
+                    <p class="section-label">Technical profile</p>
+                    <p>Python · SQL · Spark · dbt · Airflow · AWS · Terraform · Docker · ECS · Athena · Iceberg · Kafka · PostgreSQL · FastAPI · AI agents · retrieval systems · blockchain data</p>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <section id="recommendations" class="recommendations">
+    <footer id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">Recommendations</h2>
-            <p class="section-lead">Feedback from colleagues and collaborators I've worked with across data engineering, analytics, and Web3.</p>
-            <div class="recommendations-grid" aria-label="Recommendations from collaborators">
-                <article class="recommendation-card">
-                    <div>
-                        <div class="recommendation-quote" aria-hidden="true">“</div>
-                        <p class="recommendation-copy">One of the strongest data engineers I've had the chance to collaborate with. His AWS knowledge is impressive, and he always figured things out fast.</p>
-                    </div>
-                    <div class="recommendation-footer">
-                        <div class="recommendation-person">
-                            <div class="recommendation-avatar" aria-hidden="true">MB</div>
-                            <div class="recommendation-meta">
-                                <p class="recommendation-name">Murathan Ba&#287;dat</p>
-                                <p class="recommendation-role">DeFi Risk Analyst at Chaos Labs</p>
-                            </div>
-                        </div>
-                        <div class="recommendation-actions">
-                            <a href="https://www.linkedin.com/in/murathanbagdat/" target="_blank" rel="noopener noreferrer" class="recommendation-link">
-                                <span>LinkedIn</span>
-                                <i class="fas fa-arrow-up-right-from-square"></i>
-                            </a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="recommendation-card">
-                    <div>
-                        <div class="recommendation-quote" aria-hidden="true">“</div>
-                        <p class="recommendation-copy">Strong data engineering expertise, ownership, and practical problem-solving. He played a key role in building the data platform, feature store, and APIs.</p>
-                    </div>
-                    <div class="recommendation-footer">
-                        <div class="recommendation-person">
-                            <div class="recommendation-avatar" aria-hidden="true">ZZ</div>
-                            <div class="recommendation-meta">
-                                <p class="recommendation-name">Zhou Zhang</p>
-                                <p class="recommendation-role">Data at Meta</p>
-                            </div>
-                        </div>
-                        <div class="recommendation-actions">
-                            <a href="https://www.linkedin.com/in/zhouzhang2017/" target="_blank" rel="noopener noreferrer" class="recommendation-link">
-                                <span>LinkedIn</span>
-                                <i class="fas fa-arrow-up-right-from-square"></i>
-                            </a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="recommendation-card">
-                    <div>
-                        <div class="recommendation-quote" aria-hidden="true">“</div>
-                        <p class="recommendation-copy">Thoughtful, efficient, and takes ownership. He consistently delivered reliable, high-quality data infrastructure.</p>
-                    </div>
-                    <div class="recommendation-footer">
-                        <div class="recommendation-person">
-                            <div class="recommendation-avatar" aria-hidden="true">SV</div>
-                            <div class="recommendation-meta">
-                                <p class="recommendation-name">Sishir Varghese</p>
-                                <p class="recommendation-role">CEO &amp; Co-Founder at The Grid and Spectral Finance</p>
-                            </div>
-                        </div>
-                        <div class="recommendation-actions">
-                            <a href="https://www.linkedin.com/in/sishir-varghese-47576b2a/" target="_blank" rel="noopener noreferrer" class="recommendation-link">
-                                <span>LinkedIn</span>
-                                <i class="fas fa-arrow-up-right-from-square"></i>
-                            </a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="recommendation-card">
-                    <div>
-                        <div class="recommendation-quote" aria-hidden="true">“</div>
-                        <p class="recommendation-copy">Turns complex blockchain and DeFi data into something reliable and actionable. A pragmatic partner across platform, analytics, and modeling work.</p>
-                    </div>
-                    <div class="recommendation-footer">
-                        <div class="recommendation-person">
-                            <div class="recommendation-avatar" aria-hidden="true">ZP</div>
-                            <div class="recommendation-meta">
-                                <p class="recommendation-name">Zane Peycke</p>
-                                <p class="recommendation-role">Head of Machine Learning at The Grid</p>
-                            </div>
-                        </div>
-                        <div class="recommendation-actions">
-                            <a href="https://www.linkedin.com/in/peycke/" target="_blank" rel="noopener noreferrer" class="recommendation-link">
-                                <span>LinkedIn</span>
-                                <i class="fas fa-arrow-up-right-from-square"></i>
-                            </a>
-                        </div>
-                    </div>
-                </article>
+            <p class="footer-label">07 / Contact</p>
+            <h2>Have a difficult data problem?</h2>
+            <div class="contact-actions">
+                <a class="hero-primary" href="https://calendly.com/jhonlucas/one-on-one-with-jhon" target="_blank" rel="noopener noreferrer">Book a conversation</a>
+                <a class="text-link" href="mailto:jhon@datacitizen.xyz">jhon@datacitizen.xyz</a>
+                <a class="text-link" href="https://github.com/l-jhon" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+                <a class="text-link" href="https://www.linkedin.com/in/jhon-lucas/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
             </div>
-        </div>
-    </section>
-
-    <section id="services" class="services">
-        <div class="container">
-            <h2 class="section-title">Consulting Services</h2>
-            <p class="section-lead">Fixed-scope data and AI services designed for part-time and freelance engagements.</p>
-            <div class="services-grid" aria-label="Consulting services">
-                <article class="service-card">
-                    <p class="service-duration">1 week</p>
-                    <h3>Data Pipeline Audit</h3>
-                    <p>Review reliability, cost, and maintainability. Deliver a prioritized roadmap with quick wins.</p>
-                </article>
-                <article class="service-card">
-                    <p class="service-duration">2-4 weeks</p>
-                    <h3>Airflow + dbt Implementation</h3>
-                    <p>Set up modular orchestration and transformations with testing standards for production use.</p>
-                </article>
-                <article class="service-card">
-                    <p class="service-duration">2-4 weeks</p>
-                    <h3>AI Agent Workflow Implementation</h3>
-                    <p>Design and ship AI agent workflows with retrieval, tool-calling, and quality guardrails for production use.</p>
-                </article>
-                <article class="service-card">
-                    <p class="service-duration">1-2 weeks</p>
-                    <h3>AWS Cost &amp; Performance Optimization</h3>
-                    <p>Reduce cloud spend and improve throughput across ECS, Athena, Spark, and storage patterns.</p>
-                </article>
-                <article class="service-card">
-                    <p class="service-duration">2-5 weeks</p>
-                    <h3>Web3 Event Pipeline Implementation</h3>
-                    <p>Design and implement resilient blockchain event ingestion for analytics and real-time use cases.</p>
-                </article>
+            <div class="site-footer">
+                <span>Jhon Lucas / Data Citizen</span>
+                <span>Built with plain HTML and CSS.</span>
             </div>
-        </div>
-    </section>
-
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">Projects</h2>
-            <p class="section-lead">Featured projects first. Expand below to explore the complete portfolio.</p>
-            <div class="project-grid">
-                <div class="project-card featured">
-                    <span class="featured-badge">Recent</span>
-                    <div class="project-image-container" onclick="openModal(this)">
-                        <img src="images/uniswap-event-streamer.svg" alt="Uniswap V3 Event Streamer Architecture" class="project-image">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Uniswap V3 Event Streamer</h3>
-                        <div class="star-method">
-                            <h4>Situation</h4>
-                            <p>Needed reliable and observable real-time ingestion of Uniswap V3 events for downstream analytics and stateful processing.</p>
-
-                            <h4>Task</h4>
-                            <p>Build an event-driven pipeline that supports multi-pool streaming, handles chain reorganizations, and maintains fault-tolerant state across restarts.</p>
-
-                            <h4>Action</h4>
-                            <ul class="project-details">
-                                <li>Implemented producer/consumer architecture using Kafka for decoupled processing</li>
-                                <li>Built checkpoint-based recovery workflow for restart safety</li>
-                                <li>Added reorg-aware event handling to keep event state consistent</li>
-                                <li>Instrumented pipeline metrics with Prometheus and Grafana dashboards</li>
-                                <li>Containerized local stack with Docker Compose for fast setup</li>
-                            </ul>
-
-                            <h4>Result</h4>
-                            <p>Delivered a resilient and observable event streaming stack that makes Uniswap V3 event ingestion production-ready.</p>
-                        </div>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Kafka</span>
-                            <span class="tech-tag">PostgreSQL</span>
-                            <span class="tech-tag">Docker</span>
-                            <span class="tech-tag">Prometheus</span>
-                            <span class="tech-tag">Grafana</span>
-                            <span class="tech-tag">Uniswap V3</span>
-                            <span class="tech-tag">eth-defi</span>
-                        </div>
-                        <a href="https://github.com/l-jhon/uniswap-v3-event-streamer" target="_blank" rel="noopener noreferrer" class="project-link">
-                            <span>View Repository</span>
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image-container" onclick="openModal(this)">
-                        <img src="images/dbt_data_architecture.png" alt="DBT Blockchain Analytics Architecture" class="project-image">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Data Transformation Pipeline with DBT for Blockchain Analytics</h3>
-                        <div class="star-method">
-                            <h4>Situation</h4>
-                            <p>Needed a scalable, reliable, and cost-effective data transformation pipeline for cross-chain blockchain analytics across Ethereum, Arbitrum, Linea, and Eigenlayer.</p>
-                            
-                            <h4>Task</h4>
-                            <p>Build a DBT-based transformation pipeline using a 3-layer architecture, integrating with multiple cloud data warehouses and supporting advanced analytics.</p>
-                            
-                            <h4>Action</h4>
-                            <ul class="project-details">
-                                <li>Developed reusable DBT macros and incremental models for efficient data processing</li>
-                                <li>Automated scheduling and orchestration with Airflow</li>
-                                <li>Integrated with Athena, Snowflake, and BigQuery for flexible analytics</li>
-                                <li>Implemented robust testing for data reliability</li>
-                                <li>Optimized partitioning to reduce processing time and costs</li>
-                                <li>Standardized models to enable cross-chain analytics</li>
-                            </ul>
-                            
-                            <h4>Result</h4>
-                            <p>Delivered faster insights, scalable models, improved data reliability, and reduced infrastructure costs for blockchain analytics.</p>
-                        </div>
-                        <div class="tech-stack">
-                            <span class="tech-tag">DBT</span>
-                            <span class="tech-tag">Airflow</span>
-                            <span class="tech-tag">Athena</span>
-                            <span class="tech-tag">Snowflake</span>
-                            <span class="tech-tag">BigQuery</span>
-                            <span class="tech-tag">Iceberg</span>
-                            <span class="tech-tag">Docker</span>
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">SQL</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image-container" onclick="openModal(this)">
-                        <img src="images/architecture_dune.png" alt="Dune Analytics Data Ingestion Pipeline" class="project-image">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Automated Dune Analytics Data Ingestion Pipeline</h3>
-                        <div class="star-method">
-                            <h4>Situation</h4>
-                            <p>Manual data ingestion from Dune Analytics was slow, error-prone, and limited the team's ability to quickly access blockchain analytics data.</p>
-                            
-                            <h4>Task</h4>
-                            <p>Build an automated pipeline to integrate Dune Analytics with the enterprise data platform, enabling self-service ingestion into Athena.</p>
-                            
-                            <h4>Action</h4>
-                            <ul class="project-details">
-                                <li>Developed a user-friendly interface for self-service data ingestion</li>
-                                <li>Automated pipeline deployment using ECS, Airflow, Docker, and Terraform</li>
-                                <li>Integrated Slack notifications for pipeline status updates</li>
-                                <li>Documented the process for easy onboarding and maintenance</li>
-                            </ul>
-                            
-                            <h4>Result</h4>
-                            <p>Reduced data ingestion time by 90%, eliminated manual steps, improved data reliability, enhanced team productivity, and reduced operational costs.</p>
-                        </div>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">AWS ECS</span>
-                            <span class="tech-tag">Athena</span>
-                            <span class="tech-tag">S3</span>
-                            <span class="tech-tag">Airflow</span>
-                            <span class="tech-tag">Docker</span>
-                            <span class="tech-tag">Terraform</span>
-                            <span class="tech-tag">Slack API</span>
-                            <span class="tech-tag">Poetry</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image-container" onclick="openModal(this)">
-                        <img src="images/image_mermaid.png" alt="Data Pipeline Factory" class="project-image">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Data Pipeline Factory with Automated Deployment</h3>
-                        <div class="star-method">
-                            <h4>Situation</h4>
-                            <p>Teams relied on notebooks for prototyping and manual deployment, leading to slow, inconsistent, and unscalable data pipelines.</p>
-                            
-                            <h4>Task</h4>
-                            <p>Build a data pipeline factory to automate project scaffolding, configuration management, and Airflow DAG generation via YAML, enabling seamless dev-to-prod deployment.</p>
-                            
-                            <h4>Action</h4>
-                            <ul class="project-details">
-                                <li>Developed a factory to standardize pipeline structure and automate Airflow DAG creation</li>
-                                <li>Implemented YAML-driven config management for flexible pipeline definitions</li>
-                                <li>Automated deployment workflows using Docker, AWS ECS, and CI/CD</li>
-                                <li>Replaced notebook-based prototypes with production-grade pipelines</li>
-                                <li>Created onboarding documentation and templates for new team members</li>
-                            </ul>
-                            
-                            <h4>Result</h4>
-                            <p>Reduced setup time from days to minutes, improved collaboration, automated deployment, enhanced scalability, and cut pipeline deployment from one month to 1-2 weeks.</p>
-                        </div>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Airflow</span>
-                            <span class="tech-tag">Docker</span>
-                            <span class="tech-tag">AWS ECS</span>
-                            <span class="tech-tag">Terraform</span>
-                            <span class="tech-tag">YAML</span>
-                            <span class="tech-tag">Poetry</span>
-                            <span class="tech-tag">CI/CD</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image-container" onclick="openModal(this)">
-                        <img src="images/image9.png" alt="Data Lakehouse" class="project-image">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Design and Implement the Data Lakehouse</h3>
-                        <div class="star-method">
-                            <h4>Situation</h4>
-                            <p>Company needed a robust data platform, moving from a NoSQL database to a comprehensive solution for data-driven culture.</p>
-                            
-                            <h4>Task</h4>
-                            <p>Design and implement a Data Lakehouse Platform to handle multiple data sources including blockchain, lending protocols, and cryptocurrency platforms.</p>
-                            
-                            <h4>Action</h4>
-                            <ul class="project-details">
-                                <li>Conducted POC tests for open table format selection</li>
-                                <li>Designed scalable architecture for multiple data sources</li>
-                                <li>Implemented platform with blockchain and DeFi data integration</li>
-                                <li>Established data access patterns for analytics</li>
-                            </ul>
-                            
-                            <h4>Result</h4>
-                            <p>Successfully established a functional Data Lakehouse platform enabling data-driven culture and efficient data access for analytics.</p>
-                        </div>
-                        <div class="tech-stack">
-                            <span class="tech-tag">AWS</span>
-                            <span class="tech-tag">Apache Spark</span>
-                            <span class="tech-tag">Apache Hudi</span>
-                            <span class="tech-tag">Airflow</span>
-                            <span class="tech-tag">Terraform</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image-container" onclick="openModal(this)">
-                        <img src="images/image15.png" alt="EOA Address" class="project-image">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Unique EOA Address Analysis</h3>
-                        <div class="star-method">
-                            <h4>Situation</h4>
-                            <p>Need to obtain unique EOA addresses from DeFi events (AAVE V1, V2, and Compound) with specific data requirements.</p>
-                            
-                            <h4>Task</h4>
-                            <p>Create data pipeline for unique EOA address tracking using Apache Hudi.</p>
-                            
-                            <h4>Action</h4>
-                            <ul class="project-details">
-                                <li>Implemented data extraction for DeFi events</li>
-                                <li>Processed unique EOA addresses</li>
-                                <li>Used Apache Hudi for upsert functionality</li>
-                                <li>Created comprehensive tracking system</li>
-                            </ul>
-                            
-                            <h4>Result</h4>
-                            <p>Successfully created tracking system for unique EOA addresses, enabling efficient DeFi event analysis.</p>
-                        </div>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Apache Hudi</span>
-                            <span class="tech-tag">DeFi</span>
-                            <span class="tech-tag">Python</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image-container" onclick="openModal(this)">
-                        <img src="images/image19.png" alt="Wallet Transactions - Architecture" class="project-image">
-                    </div>
-                    <div class="project-image-container" onclick="openModal(this)">
-                        <img src="images/image2.png" alt="Wallet Transactions" class="project-image">
-                    </div>
-                    <div class="project-image-container" onclick="openModal(this)">
-                        <img src="images/image8.png" alt="Wallet Transactions - Data Model" class="project-image">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">On-chain Credit Score - Data Pipeline with Ethereum Erigon Node</h3>
-                        <div class="star-method">
-                            <h4>Situation</h4>
-                            <p>Organization needed comprehensive Ethereum blockchain transaction data for on-chain credit scoring, requiring faster and more reliable data access than available through Etherscan API.</p>
-                            
-                            <h4>Task</h4>
-                            <p>Design and implement a custom Ethereum node solution for on-chain credit scoring, including evaluation of different clients.</p>
-                            
-                            <h4>Action</h4>
-                            <ul class="project-details">
-                                <li>Conducted POC comparing Geth and Erigon clients for archive node capabilities</li>
-                                <li>Selected Erigon client for its superior performance in archive node operations</li>
-                                <li>Set up Python-based data extraction on AWS ECS for transaction processing</li>
-                                <li>Implemented data processing with Athena and EMR Serverless</li>
-                                <li>Created data models for transaction categorization</li>
-                                <li>Developed aggregated tables for wallet and coin balances</li>
-                            </ul>
-                            
-                            <h4>Result</h4>
-                            <p>Successfully implemented a high-performance blockchain data processing system with custom Ethereum node, enabling real-time analysis of transactions for on-chain credit scoring.</p>
-                        </div>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Ethereum Node</span>
-                            <span class="tech-tag">Erigon Client</span>
-                            <span class="tech-tag">AWS ECS</span>
-                            <span class="tech-tag">EMR Serverless</span>
-                            <span class="tech-tag">Athena</span>
-                            <span class="tech-tag">Airflow</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image-container" onclick="openModal(this)">
-                        <img src="images/image3.png" alt="Polygon Subgraph - DeFi Events" class="project-image">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Data Ingestion Polygon Subgraph - DeFi Events</h3>
-                        <div class="star-method">
-                            <h4>Situation</h4>
-                            <p>We needed to fetch data from The Graph, specifically DeFi data from the Polygon subgraph. The data of interest were events generated by lending protocols.</p>
-                            
-                            <h4>Task</h4>
-                            <p>Set up a reliable data extraction and processing pipeline to get this specific DeFi data from the Polygon subgraph on The Graph.</p>
-                            
-                            <h4>Action</h4>
-                            <ul class="project-details">
-                                <li>Configured extraction parameters for DeFi events</li>
-                                <li>Implemented data extraction from lending protocols</li>
-                                <li>Processed and transformed data for analysis</li>
-                                <li>Integrated with existing data infrastructure</li>
-                            </ul>
-                            
-                            <h4>Result</h4>
-                            <p>Successfully implemented a pipeline to fetch and process DeFi data from the Polygon subgraph, enabling detailed analysis of lending protocol events.</p>
-                        </div>
-                        <div class="tech-stack">
-                            <span class="tech-tag">The Graph</span>
-                            <span class="tech-tag">Polygon</span>
-                            <span class="tech-tag">DeFi</span>
-                            <span class="tech-tag">Python</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image-container" onclick="openModal(this)">
-                        <img src="images/image17.png" alt="MWAA" class="project-image">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">MWAA Private Network Deployment</h3>
-                        <div class="star-method">
-                            <h4>Situation</h4>
-                            <p>MWAA configuration had networking issues causing high costs and security concerns.</p>
-                            
-                            <h4>Task</h4>
-                            <p>Reconfigure MWAA to operate within private network accessible only through VPN.</p>
-                            
-                            <h4>Action</h4>
-                            <ul class="project-details">
-                                <li>Assessed current MWAA setup</li>
-                                <li>Replaced NAT gateway with Internet Gateway</li>
-                                <li>Implemented private network configuration</li>
-                                <li>Enhanced security measures</li>
-                            </ul>
-                            
-                            <h4>Result</h4>
-                            <p>Reduced data traffic costs by 90% and improved security through VPN-only access.</p>
-                        </div>
-                        <div class="tech-stack">
-                            <span class="tech-tag">AWS MWAA</span>
-                            <span class="tech-tag">Terraform</span>
-                            <span class="tech-tag">VPC</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image-container" onclick="openModal(this)">
-                        <img src="images/image7.png" alt="BI Platform" class="project-image">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">BI Platform - Retail</h3>
-                        <div class="star-method">
-                            <h4>Situation</h4>
-                            <p>Working on a project that involved defining business rules with the business team and developing data infrastructure.</p>
-                            
-                            <h4>Task</h4>
-                            <p>Cooperate with business team to define rules and assist with service deployment, working with consulting company for DW data modeling.</p>
-                            
-                            <h4>Action</h4>
-                            <ul class="project-details">
-                                <li>Collaborated with business team to translate needs into concrete rules</li>
-                                <li>Assisted in deploying necessary services for project infrastructure</li>
-                                <li>Participated in DW data modeling discussions and design process</li>
-                                <li>Determined fact and dimension tables layout using schema data modeling</li>
-                            </ul>
-                            
-                            <h4>Result</h4>
-                            <p>Successfully defined business rules and established robust data infrastructure, leading to enhanced data management capabilities.</p>
-                        </div>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Microsoft SQL Server</span>
-                            <span class="tech-tag">SSAS</span>
-                            <span class="tech-tag">SSRS</span>
-                            <span class="tech-tag">SSIS</span>
-                            <span class="tech-tag">Targit</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image-container" onclick="openModal(this)">
-                        <img src="images/image11.png" alt="Stockout Algorithm" class="project-image">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Algorithm to reduce Stockout - Retail</h3>
-                        <div class="star-method">
-                            <h4>Situation</h4>
-                            <p>Company was facing a high number of product stockouts across all branches.</p>
-                            
-                            <h4>Task</h4>
-                            <p>Develop an algorithm to suggest product transfers between branches to reduce stockouts based on business rules.</p>
-                            
-                            <h4>Action</h4>
-                            <ul class="project-details">
-                                <li>Conducted exploratory analysis of stockouts across branches</li>
-                                <li>Developed algorithm for product transfer suggestions</li>
-                                <li>Created consolidated data view for visualization</li>
-                                <li>Implemented business rules into the algorithm</li>
-                            </ul>
-                            
-                            <h4>Result</h4>
-                            <p>Significantly reduced product stockouts across branches through data-driven inventory management.</p>
-                        </div>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Oracle Database</span>
-                            <span class="tech-tag">SQL</span>
-                            <span class="tech-tag">Matplotlib</span>
-                            <span class="tech-tag">Jupyter Notebook</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image-container" onclick="openModal(this)">
-                        <img src="images/image11.png" alt="RFM Analysis" class="project-image">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">RFM Analysis</h3>
-                        <div class="star-method">
-                            <h4>Situation</h4>
-                            <p>Company needed effective customer segmentation to improve marketing efficiency and sales outcomes.</p>
-                            
-                            <h4>Task</h4>
-                            <p>Implement RFM analysis and cluster analysis for customer segmentation to improve marketing targeting.</p>
-                            
-                            <h4>Action</h4>
-                            <ul class="project-details">
-                                <li>Collected and prepared customer data for RFM analysis</li>
-                                <li>Scored customers based on recency, frequency, and monetary value</li>
-                                <li>Performed cluster analysis for similar buying behaviors</li>
-                                <li>Created tailored marketing strategies for each segment</li>
-                            </ul>
-                            
-                            <h4>Result</h4>
-                            <p>Improved marketing effectiveness through targeted campaigns and increased sales through better customer understanding.</p>
-                        </div>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Oracle Database</span>
-                            <span class="tech-tag">SQL</span>
-                            <span class="tech-tag">Metabase</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image-container" onclick="openModal(this)">
-                        <img src="images/image18.png" alt="Twitter Analysis - Overview" class="project-image">
-                    </div>
-                    <div class="project-image-container" onclick="openModal(this)">
-                        <img src="images/image14.png" alt="Twitter Analysis - Apache NiFi" class="project-image">
-                    </div>
-                    <div class="project-image-container" onclick="openModal(this)">
-                        <img src="images/image10.png" alt="Twitter Analysis - StreamSets" class="project-image">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Twitter Data Analysis</h3>
-                        <div class="star-method">
-                            <h4>Situation</h4>
-                            <p>Academic project requiring Twitter data collection and analysis for specific hashtags.</p>
-                            
-                            <h4>Task</h4>
-                            <p>Design and implement data pipeline for tweet extraction and analysis using Apache Nifi and StreamSets.</p>
-                            
-                            <h4>Action</h4>
-                            <ul class="project-details">
-                                <li>Set up data extraction using Apache Nifi</li>
-                                <li>Implemented StreamSets for data processing</li>
-                                <li>Created data visualization</li>
-                                <li>Generated insights from collected data</li>
-                            </ul>
-                            
-                            <h4>Result</h4>
-                            <p>Successfully gathered and analyzed Twitter data, gaining practical experience with data pipeline tools.</p>
-                        </div>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Apache Nifi</span>
-                            <span class="tech-tag">StreamSets</span>
-                            <span class="tech-tag">Python</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image-container" onclick="openModal(this)">
-                        <img src="images/image6.png" alt="Lambda Alerts - Architecture" class="project-image">
-                    </div>
-                    <div class="project-image-container" onclick="openModal(this)">
-                        <img src="images/image12.png" alt="Lambda Alerts - Monitoring" class="project-image">
-                    </div>
-                    <div class="project-image-container" onclick="openModal(this)">
-                        <img src="images/image13.png" alt="Lambda Alerts - Slack Integration" class="project-image">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Lambda Observability Alerts</h3>
-                        <div class="star-method">
-                            <h4>Situation</h4>
-                            <p>20+ AWS Lambda functions lacked failure notification system.</p>
-                            
-                            <h4>Task</h4>
-                            <p>Create observability stack for Lambda failure alerts on Slack.</p>
-                            
-                            <h4>Action</h4>
-                            <ul class="project-details">
-                                <li>Developed Python-based monitoring solution</li>
-                                <li>Implemented Slack integration</li>
-                                <li>Created detailed alert messages</li>
-                                <li>Set up automated monitoring</li>
-                            </ul>
-                            
-                            <h4>Result</h4>
-                            <p>Improved Lambda function monitoring with real-time Slack alerts, reducing downtime and improving reliability.</p>
-                        </div>
-                        <div class="tech-stack">
-                            <span class="tech-tag">AWS Lambda</span>
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Slack API</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image-container" onclick="openModal(this)">
-                        <img src="images/image16.png" alt="Data Lakehouse Platform" class="project-image">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Data Lakehouse Platform - Marketplace</h3>
-                        <div class="star-method">
-                            <h4>Situation</h4>
-                            <p>Company sought to become a data-driven organization, needing to construct a data lakehouse platform on AWS to handle 30+ databases, 300+ tables, and 35TB+ of data on S3.</p>
-                            
-                            <h4>Task</h4>
-                            <p>Create a comprehensive data lakehouse platform using modern data stack technologies including Spark on EMR with Hudi, Athena, ECS, Airbyte, Airflow, and Power BI.</p>
-                            
-                            <h4>Action</h4>
-                            <ul class="project-details">
-                                <li>Set up Spark on AWS EMR with Hudi as table format</li>
-                                <li>Configured Athena for interactive queries</li>
-                                <li>Implemented Python scripts on ECS for API data collection</li>
-                                <li>Integrated Airbyte for additional data extraction</li>
-                                <li>Set up Airflow for orchestration and scheduling</li>
-                            </ul>
-                            
-                            <h4>Result</h4>
-                            <p>Successfully established a scalable data lakehouse platform enabling data-driven decision making and improved data accessibility.</p>
-                        </div>
-                        <div class="tech-stack">
-                            <span class="tech-tag">AWS Cloud</span>
-                            <span class="tech-tag">Apache Spark</span>
-                            <span class="tech-tag">Apache Hudi</span>
-                            <span class="tech-tag">Airflow</span>
-                            <span class="tech-tag">Airbyte</span>
-                            <span class="tech-tag">Power BI</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image-container" onclick="openModal(this)">
-                        <img src="images/image1.png" alt="DynamoDB Pipeline" class="project-image">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Data Ingestion Pipeline - From DynamoDB to Data Lakehouse</h3>
-                        <div class="star-method">
-                            <h4>Situation</h4>
-                            <p>Marketplace platform needed to summarize event data from DynamoDB for business analysis, requiring a robust data pipeline solution.</p>
-                            
-                            <h4>Task</h4>
-                            <p>Design and implement a pipeline to extract data from DynamoDB and load it into the Data Lakehouse for analysis.</p>
-                            
-                            <h4>Action</h4>
-                            <ul class="project-details">
-                                <li>Leveraged AWS Kinesis Streams for real-time data capture</li>
-                                <li>Used Kinesis Analytics for data stream processing</li>
-                                <li>Stored processed data in S3 Data Lakehouse</li>
-                                <li>Implemented Athena for SQL querying capabilities</li>
-                            </ul>
-                            
-                            <h4>Result</h4>
-                            <p>Successfully implemented a real-time data pipeline enabling efficient analysis of DynamoDB event data, leading to improved business insights.</p>
-                        </div>
-                        <div class="tech-stack">
-                            <span class="tech-tag">AWS Kinesis</span>
-                            <span class="tech-tag">DynamoDB</span>
-                            <span class="tech-tag">S3</span>
-                            <span class="tech-tag">Athena</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image-container" onclick="openModal(this)">
-                        <img src="images/image4.png" alt="CRM Webhook" class="project-image">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Webhook to listen to CRM Events</h3>
-                        <div class="star-method">
-                            <h4>Situation</h4>
-                            <p>Sales team needed real-time insights from CRM events but lacked a system to capture and process these events for immediate analysis.</p>
-                            
-                            <h4>Task</h4>
-                            <p>Create a webhook system to listen to CRM events, process them, and store the data in the Data Lakehouse for real-time analysis.</p>
-                            
-                            <h4>Action</h4>
-                            <ul class="project-details">
-                                <li>Developed Flask application for webhook endpoint</li>
-                                <li>Implemented AWS Lambda for event processing</li>
-                                <li>Set up Serverless framework for deployment</li>
-                                <li>Integrated with S3 for data storage</li>
-                            </ul>
-                            
-                            <h4>Result</h4>
-                            <p>Successfully implemented a real-time CRM event processing system, enabling immediate access to sales data and improving decision-making capabilities.</p>
-                        </div>
-                        <div class="tech-stack">
-                            <span class="tech-tag">AWS Lambda</span>
-                            <span class="tech-tag">Flask</span>
-                            <span class="tech-tag">Serverless</span>
-                            <span class="tech-tag">S3</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="projects-toggle-wrap">
-                <button id="toggleProjectsBtn" class="toggle-projects-btn">Show More Projects</button>
-            </div>
-        </div>
-    </section>
-
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title">Skills & Technologies</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Cloud & Infrastructure</h3>
-                    <ul class="skill-list">
-                        <li>AWS Cloud</li>
-                        <li>Terraform</li>
-                        <li>Docker</li>
-                        <li>Kubernetes</li>
-                        <li>AWS ECS</li>
-                        <li>AWS Lambda</li>
-                        <li>AWS MWAA</li>
-                        <li>Serverless</li>
-                    </ul>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Data Engineering</h3>
-                    <ul class="skill-list">
-                        <li>Apache Spark</li>
-                        <li>Apache Airflow</li>
-                        <li>DBT</li>
-                        <li>Apache Hudi</li>
-                        <li>Apache Iceberg</li>
-                        <li>Delta Lake</li>
-                        <li>Apache NiFi</li>
-                        <li>StreamSets</li>
-                        <li>Airbyte</li>
-                        <li>Data Lakehouse</li>
-                    </ul>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Programming & Databases</h3>
-                    <ul class="skill-list">
-                        <li>Python</li>
-                        <li>SQL</li>
-                        <li>SparkSQL</li>
-                        <li>FastAPI</li>
-                        <li>Flask</li>
-                        <li>PostgreSQL</li>
-                        <li>DynamoDB</li>
-                        <li>Oracle Database</li>
-                    </ul>
-                </div>
-
-                <div class="skill-category">
-                    <h3>AI Engineering & Agents</h3>
-                    <ul class="skill-list">
-                        <li>LLM Application Design</li>
-                        <li>Agentic Workflows</li>
-                        <li>RAG Systems</li>
-                        <li>Tool Calling Integration</li>
-                        <li>Prompt Engineering</li>
-                        <li>Model Evaluation</li>
-                        <li>OpenAI API</li>
-                        <li>Vector Search</li>
-                    </ul>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Blockchain & Web3</h3>
-                    <ul class="skill-list">
-                        <li>Ethereum</li>
-                        <li>DeFi Analytics</li>
-                        <li>The Graph</li>
-                        <li>Polygon</li>
-                        <li>Smart Contracts</li>
-                        <li>Blockchain Data</li>
-                    </ul>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Data Analytics & BI</h3>
-                    <ul class="skill-list">
-                        <li>Power BI</li>
-                        <li>Metabase</li>
-                        <li>Data Visualization</li>
-                        <li>RFM Analysis</li>
-                        <li>Business Intelligence</li>
-                        <li>Data Modeling</li>
-                    </ul>
-                </div>
-
-                <div class="skill-category">
-                    <h3>DevOps & Monitoring</h3>
-                    <ul class="skill-list">
-                        <li>CI/CD</li>
-                        <li>Git</li>
-                        <li>Grafana</li>
-                        <li>Splunk</li>
-                        <li>Sentry</li>
-                        <li>Slack API</li>
-                        <li>Observability</li>
-                        <li>Alerting Systems</li>
-                        <li>Monitoring</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="contact-card">
-                <h2 class="section-title">Work With Me</h2>
-                <p>Available for part-time consulting and freelance projects in data engineering, AI workflows, analytics platforms, and Web3 pipelines.</p>
-                <p>I usually reply within 24 hours on LinkedIn.</p>
-                <div class="contact-actions">
-                    <a href="https://calendly.com/jhonlucas/one-on-one-with-jhon" target="_blank" rel="noopener noreferrer" class="cta-btn cta-primary">
-                        <i class="fas fa-calendar-check"></i>
-                        <span>Book a 30-min Call</span>
-                    </a>
-                    <a href="https://www.linkedin.com/in/jhon-lucas/" target="_blank" rel="noopener noreferrer" class="cta-btn cta-secondary">
-                        <i class="fab fa-linkedin"></i>
-                        <span>Send LinkedIn Message</span>
-                    </a>
-                    <a href="https://github.com/l-jhon" target="_blank" rel="noopener noreferrer" class="cta-btn cta-secondary">
-                        <i class="fab fa-github"></i>
-                        <span>View GitHub</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Jhon Lucas. All rights reserved.</p>
         </div>
     </footer>
-
-    <div class="modal" id="imageModal">
-        <div class="modal-content">
-            <button class="close-modal" onclick="closeModal()">&times;</button>
-            <button class="nav-button prev-button" onclick="navigateImage(-1)">❮</button>
-            <img src="" alt="Project Diagram" class="modal-image" id="modalImage">
-            <button class="nav-button next-button" onclick="navigateImage(1)">❯</button>
-        </div>
-    </div>
-
-    <script>
-        // Mobile menu toggle
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        const navLinks = document.querySelector('.nav-links');
-
-        mobileMenuBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Show featured projects first, with optional expansion
-        const projectCards = Array.from(document.querySelectorAll('.project-grid .project-card'));
-        const toggleProjectsBtn = document.getElementById('toggleProjectsBtn');
-        const featuredProjectLimit = 4;
-        let allProjectsVisible = false;
-
-        if (toggleProjectsBtn && projectCards.length > featuredProjectLimit) {
-            projectCards.forEach((card, index) => {
-                if (index >= featuredProjectLimit) {
-                    card.classList.add('hidden-project');
-                }
-            });
-
-            toggleProjectsBtn.addEventListener('click', () => {
-                allProjectsVisible = !allProjectsVisible;
-                projectCards.forEach((card, index) => {
-                    if (index >= featuredProjectLimit) {
-                        card.classList.toggle('hidden-project', !allProjectsVisible);
-                    }
-                });
-                toggleProjectsBtn.textContent = allProjectsVisible ? 'Show Featured Only' : 'Show More Projects';
-            });
-        } else if (toggleProjectsBtn) {
-            toggleProjectsBtn.style.display = 'none';
-        }
-
-        // Modal functionality
-        let currentImageIndex = 0;
-        let currentProjectImages = [];
-
-        function openModal(element) {
-            const modal = document.getElementById('imageModal');
-            const modalImg = document.getElementById('modalImage');
-            const projectCard = element.closest('.project-card');
-            const images = projectCard.querySelectorAll('.project-image');
-            
-            currentProjectImages = Array.from(images);
-            currentImageIndex = currentProjectImages.indexOf(element.querySelector('.project-image'));
-            
-            modal.classList.add('active');
-            updateModalImage();
-            document.body.style.overflow = 'hidden';
-        }
-
-        function updateModalImage() {
-            const modalImg = document.getElementById('modalImage');
-            const img = currentProjectImages[currentImageIndex];
-            modalImg.src = img.src;
-            modalImg.alt = img.alt;
-        }
-
-        function navigateImage(direction) {
-            currentImageIndex = (currentImageIndex + direction + currentProjectImages.length) % currentProjectImages.length;
-            updateModalImage();
-        }
-
-        function closeModal() {
-            const modal = document.getElementById('imageModal');
-            modal.classList.remove('active');
-            document.body.style.overflow = 'auto';
-        }
-
-        // Close modal when clicking outside the image
-        document.getElementById('imageModal').addEventListener('click', function(e) {
-            if (e.target === this) {
-                closeModal();
-            }
-        });
-
-        // Add keyboard navigation
-        document.addEventListener('keydown', function(e) {
-            if (document.getElementById('imageModal').classList.contains('active')) {
-                if (e.key === 'ArrowLeft') {
-                    navigateImage(-1);
-                } else if (e.key === 'ArrowRight') {
-                    navigateImage(1);
-                } else if (e.key === 'Escape') {
-                    closeModal();
-                }
-            }
-        });
-    </script>
 </body>
 </html>
