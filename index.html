@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jhon Lucas | Data Engineer &amp; Consultant</title>
-    <meta name="description" content="Jhon Lucas builds dependable data platforms, AI workflows, and blockchain infrastructure for teams that need production-ready systems.">
+    <title>Data Citizen | Data &amp; AI Engineering</title>
+    <meta name="description" content="Data Citizen is Jhon Lucas's independent consultancy for dependable data platforms, AI workflows, and blockchain infrastructure.">
     <meta name="keywords" content="Jhon Lucas, Data Engineer, Data Engineering Consultant, AI Engineering, Web3 Data, AWS, Airflow, dbt, Spark">
     <link rel="canonical" href="https://l-jhon.github.io/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Jhon Lucas | Data Engineer &amp; Consultant">
+    <meta property="og:title" content="Data Citizen | Data &amp; AI Engineering">
     <meta property="og:description" content="Data systems that survive production: platforms, AI workflows, and blockchain infrastructure.">
     <meta property="og:url" content="https://l-jhon.github.io/">
     <meta property="og:image" content="https://l-jhon.github.io/images/uniswap-event-streamer.svg">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Jhon Lucas | Data Engineer &amp; Consultant">
+    <meta name="twitter:title" content="Data Citizen | Data &amp; AI Engineering">
     <meta name="twitter:description" content="Data systems that survive production.">
     <meta name="twitter:image" content="https://l-jhon.github.io/images/uniswap-event-streamer.svg">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -34,6 +34,11 @@
       "name": "Jhon Lucas",
       "url": "https://l-jhon.github.io/",
       "jobTitle": "Data and AI Engineering Consultant",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Data Citizen",
+        "url": "https://l-jhon.github.io/"
+      },
       "sameAs": [
         "https://www.linkedin.com/in/jhon-lucas/",
         "https://github.com/l-jhon"
@@ -135,16 +140,10 @@
             text-decoration: none;
         }
 
-        .wordmark-mark {
-            display: inline-grid;
-            place-items: center;
-            width: 34px;
-            height: 34px;
-            border: 1px solid var(--accent);
-            color: var(--accent);
-            font-family: "IBM Plex Mono", monospace;
-            font-size: 0.76rem;
-            letter-spacing: -0.08em;
+        .wordmark-symbol {
+            width: 42px;
+            height: 42px;
+            object-fit: contain;
         }
 
         .nav-links {
@@ -584,6 +583,7 @@
 
         .site-footer {
             display: flex;
+            align-items: flex-end;
             justify-content: space-between;
             gap: 2rem;
             margin-top: 7rem;
@@ -592,6 +592,19 @@
             color: var(--muted);
             font-family: "IBM Plex Mono", monospace;
             font-size: 0.75rem;
+        }
+
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+        }
+
+        .footer-brand-logo {
+            width: 104px;
+            height: 104px;
+            object-fit: contain;
+            border-radius: var(--radius);
         }
 
         :focus-visible {
@@ -694,6 +707,7 @@
             }
 
             .site-footer {
+                align-items: flex-start;
                 flex-direction: column;
                 margin-top: 5rem;
             }
@@ -711,9 +725,9 @@
 
     <header class="site-header">
         <nav class="container nav" aria-label="Main navigation">
-            <a class="wordmark" href="#" aria-label="Jhon Lucas, home">
-                <span class="wordmark-mark" aria-hidden="true">DC</span>
-                <span>Jhon Lucas</span>
+            <a class="wordmark" href="#" aria-label="Data Citizen, home">
+                <img src="images/data-citizen-symbol.png" alt="" class="wordmark-symbol" aria-hidden="true">
+                <span>Data Citizen</span>
             </a>
             <div class="nav-links">
                 <a href="#work">Work</a>
@@ -728,7 +742,7 @@
         <section class="hero" aria-labelledby="hero-title">
             <div class="container hero-grid">
                 <div>
-                    <p class="eyebrow">Jhon Lucas · Data &amp; AI Engineering Consultant</p>
+                    <p class="eyebrow">Jhon Lucas · Founder &amp; Data/AI Engineering Consultant</p>
                     <h1 id="hero-title">I build data systems that survive production.</h1>
                     <p class="hero-intro">Data platforms, AI workflows, and blockchain infrastructure for teams that need dependable systems—not another prototype.</p>
                     <p class="hero-personal">I like messy data, clear systems, and infrastructure that becomes boring for the right reasons.</p>
@@ -1006,7 +1020,10 @@
                 <a class="text-link" href="https://www.linkedin.com/in/jhon-lucas/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
             </div>
             <div class="site-footer">
-                <span>Jhon Lucas / Data Citizen</span>
+                <div class="footer-brand">
+                    <img src="images/data-citizen-logo-transparent.png" alt="Data Citizen logo" class="footer-brand-logo">
+                    <span>Data Citizen, founded by Jhon Lucas</span>
+                </div>
                 <span>Built with plain HTML and CSS.</span>
             </div>
         </div>

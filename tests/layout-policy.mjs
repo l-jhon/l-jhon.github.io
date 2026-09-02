@@ -23,8 +23,8 @@ assert.match(
 );
 assert.match(
   hero,
-  /Jhon Lucas · Data &amp; AI Engineering Consultant/,
-  'the hero should describe the combined data and AI consulting focus',
+  /Jhon Lucas · Founder &amp; Data\/AI Engineering Consultant/,
+  'the hero should connect Jhon to the Data Citizen consultancy',
 );
 assert.equal(
   (hero.match(/class="hero-primary"/g) ?? []).length,
@@ -88,6 +88,31 @@ assert.match(
   html,
   /href="mailto:jhon@datacitizen\.xyz">jhon@datacitizen\.xyz<\/a>/,
   'the visible contact address and mail link should use the Data Citizen domain',
+);
+assert.match(
+  html,
+  /<title>Data Citizen \| Data &amp; AI Engineering<\/title>/,
+  'the browser title should lead with the consultancy brand',
+);
+assert.match(
+  html,
+  /class="wordmark"[^>]*>[\s\S]*?<span>Data Citizen<\/span>/,
+  'the header wordmark should lead with Data Citizen',
+);
+assert.match(
+  html,
+  /class="wordmark"[^>]*>[\s\S]*?<img src="images\/data-citizen-symbol\.png"[^>]*class="wordmark-symbol"/,
+  'the compact header should use the simplified Data Citizen symbol',
+);
+assert.match(
+  html,
+  /Data Citizen, founded by Jhon Lucas/,
+  'the footer should explain the relationship between the brand and founder',
+);
+assert.match(
+  html,
+  /<img src="images\/data-citizen-logo-transparent\.png" alt="Data Citizen logo" class="footer-brand-logo">/,
+  'the footer should retain the complete established Data Citizen logo',
 );
 
 console.log('layout policy checks passed');
