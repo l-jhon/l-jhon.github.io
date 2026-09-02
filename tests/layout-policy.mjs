@@ -57,6 +57,59 @@ for (const title of [
     `selected work should include ${title}`,
   );
 }
+const projectArchive = html.match(/<section id="archive"[\s\S]*?<\/section>/)?.[0] ?? '';
+assert.equal(
+  (projectArchive.match(/<details class="archive-project">/g) ?? []).length,
+  14,
+  'the archive should restore all fourteen non-featured projects',
+);
+assert.equal(
+  (projectArchive.match(/class="archive-toggle"/g) ?? []).length,
+  14,
+  'every archived project should expose a visible expand control',
+);
+assert.doesNotMatch(
+  projectArchive,
+  /<details class="archive-project"\s+open>/,
+  'archived projects should be collapsed by default',
+);
+assert.equal(
+  (projectArchive.match(/class="archive-gallery"/g) ?? []).length,
+  14,
+  'every archived project should restore its diagram gallery',
+);
+assert.equal(
+  (projectArchive.match(/class="archive-diagram"/g) ?? []).length,
+  20,
+  'the archive should restore all twenty original project diagrams',
+);
+assert.equal(
+  (projectArchive.match(/class="archive-diagram-link"/g) ?? []).length,
+  20,
+  'every archived diagram should open a full-size image',
+);
+for (const title of [
+  'Cross-chain dbt transformation layer',
+  'Automated Dune Analytics ingestion',
+  'Data Lakehouse for blockchain and DeFi',
+  'Unique EOA Address Analysis',
+  'On-chain Credit Score Pipeline',
+  'Polygon Subgraph DeFi Ingestion',
+  'MWAA Private Network Deployment',
+  'BI Platform for Retail',
+  'Stockout Reduction Model',
+  'RFM Customer Segmentation',
+  'Twitter Data Analysis',
+  'Lambda Observability Alerts',
+  'DynamoDB to Lakehouse Pipeline',
+  'CRM Event Webhook',
+]) {
+  assert.match(
+    projectArchive,
+    new RegExp(`<span class="archive-title">${title}<\\/span>`),
+    `project archive should include ${title}`,
+  );
+}
 assert.equal(
   (html.match(/class="engagement-row"/g) ?? []).length,
   3,
@@ -104,15 +157,10 @@ assert.match(
   /class="wordmark"[^>]*>[\s\S]*?<img src="images\/data-citizen-symbol\.png"[^>]*class="wordmark-symbol"/,
   'the compact header should use the simplified Data Citizen symbol',
 );
-assert.match(
+assert.doesNotMatch(
   html,
-  /Data Citizen, founded by Jhon Lucas/,
-  'the footer should explain the relationship between the brand and founder',
-);
-assert.match(
-  html,
-  /<img src="images\/data-citizen-logo-transparent\.png" alt="Data Citizen logo" class="footer-brand-logo">/,
-  'the footer should retain the complete established Data Citizen logo',
+  /class="site-footer"|Data Citizen, founded by Jhon Lucas|Built with plain HTML and CSS\./,
+  'the contact area should end cleanly without a redundant brand signature',
 );
 
 console.log('layout policy checks passed');
