@@ -42,14 +42,15 @@ for (let index = 1; index < sectionOrder.length; index += 1) {
 
 assert.equal(
   (html.match(/class="case-study"/g) ?? []).length,
-  3,
-  'selected work should be curated to exactly three case studies',
+  4,
+  'selected work should be curated to four case studies',
 );
 const selectedWork = html.match(/<section id="work"[\s\S]*?<\/section>/)?.[0] ?? '';
 for (const title of [
   'Uniswap V3 Event Streamer',
   'Marketplace Data Lakehouse',
   'Data Pipeline Factory',
+  'dbt on ECS Fargate with Airflow and Cosmos',
 ]) {
   assert.match(
     selectedWork,

@@ -870,7 +870,7 @@
                 <div class="section-heading">
                     <p class="section-label">01 / Selected work</p>
                     <div>
-                        <h2 id="work-title">Three systems, shown with the difficult parts included.</h2>
+                        <h2 id="work-title">Four systems, shown with the difficult parts included.</h2>
                         <p>Architecture matters, but so do recovery, deployment, observability, and the handoff to the people who operate what was built.</p>
                     </div>
                 </div>
@@ -940,6 +940,29 @@
                                 </div>
                             </div>
                             <p class="case-stack">Python, Airflow, YAML, Docker, AWS ECS, Terraform, CI/CD</p>
+                        </div>
+                    </article>
+
+                    <article class="case-study">
+                        <div class="case-media">
+                            <img src="images/dbt_ecs_cosmos.png" alt="Before and after diagram: dbt running on the Airflow worker versus on ephemeral ECS Fargate">
+                        </div>
+                        <div>
+                            <p class="case-index">Case 04 · Orchestration</p>
+                            <h3>dbt on ECS Fargate with Airflow and Cosmos</h3>
+                            <p class="case-summary">Moving dbt execution off the Airflow workers and onto ephemeral ECS Fargate tasks, so orchestration and compute scale independently.</p>
+                            <div class="case-details">
+                                <div>
+                                    <h4>The hard part</h4>
+                                    <p>Cosmos ran dbt in-process on the workers, where a heavy build competes with the scheduler and puts data SLAs at risk.</p>
+                                </div>
+                                <div>
+                                    <h4>The system</h4>
+                                    <p>Cosmos ExecutionMode.AWS_ECS, with the cluster and task definition created at DAG runtime and torn down after, driven by a YAML config, Terraform, and CI/CD.</p>
+                                </div>
+                            </div>
+                            <p class="case-stack">Airflow, dbt, Cosmos, AWS ECS, Fargate, Athena, Glue, Terraform, GitHub Actions</p>
+                            <a class="case-link" href="https://github.com/l-jhon/airflow-cosmos-dbt-on-ecs" target="_blank" rel="noopener noreferrer">Read the repository ↗</a>
                         </div>
                     </article>
                 </div>
