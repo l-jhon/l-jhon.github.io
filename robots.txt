@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://datacitizen.xyz/sitemap.xml
